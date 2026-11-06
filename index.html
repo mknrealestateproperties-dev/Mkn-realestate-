@@ -1,1 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MKN Real Estate Point | One team • Multiple property solutions</title>
+<meta name="description" content="MKN Real Estate Point helps you move from planning to property: residential project sales, interior design and execution, home loan assistance, architecture coordination and site support.">
+<meta name="theme-color" content="#0B1F3A">
 
+<!-- Social sharing.
+     NOTE: og:image / og:url must be ABSOLUTE URLs for most platforms to show a preview.
+     After publishing, replace the two values marked PUBLISHED-URL below
+     with your real GitHub Pages address (see README.md, step "Finish SEO"). -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MKN Real Estate Point">
+<meta property="og:title" content="MKN Real Estate Point | One team • Multiple property solutions">
+<meta property="og:description" content="From planning to property, we help you move forward. Residential projects, interiors, home loan assistance and more.">
+<meta property="og:image" content="assets/hero-property.jpg"><!-- PUBLISHED-URL: make absolute -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MKN Real Estate Point">
+<meta name="twitter:description" content="From planning to property, we help you move forward.">
+<meta name="twitter:image" content="assets/hero-property.jpg"><!-- PUBLISHED-URL: make absolute -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1F3A'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23C9A96E'%3EMKN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "MKN Real Estate Point",
+  "slogan": "One team • Multiple property solutions",
+  "description": "Residential project sales, interior design and execution, home loan assistance, architecture and design coordination, pre-construction and site support, and small-scale building solutions.",
+  "email": "Krishnanaikm8@gmail.com",
+  "telephone": "+91 8466098440"
+}
+</script>
+
+<script>
+/* Image / logo fallback used by onerror="" attributes below. Defined early so it
+   works even if an image fails before the main script has loaded. */
+window.mknImgFail = function (img) {
+  img.onerror = null;
+  img.style.display = 'none';
+  if (img.parentElement) img.parentElement.classList.add('is-fallback');
+};
+</script>
+
+<style>
+:root{
+  --navy-900:#07152A;
+  --navy-800:#0B1F3A;
+  --navy-700:#13305A;
+  --navy-100:#E6ECF5;
+  --gold-500:#C9A96E;
+  --gold-300:#E8D5A8;
+  --gold-700:#8A6A2F;   /* gold for text on light backgrounds (AA contrast) */
+  --ivory:#FAF7F2;
+  --white:#fff;
+  --ink:#16202F;
+  --muted:#51607A;
+  --line:#E3DED3;
+  --radius:16px;
+  --shadow:0 18px 40px -18px rgba(7,21,42,.35);
+  --header-h:76px;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:1.0625rem;line-height:1.65;color:var(--ink);background:var(--white);overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);line-height:1.12;margin:0 0 .5em;color:var(--navy-800);letter-spacing:.005em}
+h1{font-size:clamp(2.5rem,6.2vw,4.5rem);font-weight:600}
+h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:600}
+h3{font-size:1.5rem;font-weight:600}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--gold-500);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold-500);color:var(--navy-900);padding:.6rem 1rem;border-radius:8px;z-index:200;font-weight:600}
+.skip:focus{left:8px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+section{padding:clamp(64px,9vw,112px) 0}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-700);margin-bottom:1rem}
+.eyebrow::before{content:"";display:inline-block;width:28px;height:1px;background:currentColor;vertical-align:middle;margin-right:.8rem}
+.lead{font-size:1.15rem;color:var(--muted);max-width:60ch}
+.dark{background:var(--navy-800);color:#D6DEEB}
+.dark h2,.dark h3{color:#fff}
+.dark .eyebrow{color:var(--gold-500)}
+.dark .lead{color:#B9C5D9}
+.ivory{background:var(--ivory)}
+.section-head{max-width:720px;margin-bottom:clamp(36px,5vw,56px)}
+.icon{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon.fill{fill:currentColor;stroke:none}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font:600 .98rem/1 var(--sans);padding:1rem 1.6rem;border-radius:999px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:transform .2s,background .2s,color .2s,border-color .2s,box-shadow .2s;min-height:48px}
+.btn .icon{width:20px;height:20px}
+.btn-gold{background:var(--gold-500);color:var(--navy-900)}
+.btn-gold:hover{background:var(--gold-300);transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(201,169,110,.9)}
+.btn-navy{background:var(--navy-800);color:#fff}
+.btn-navy:hover{background:var(--navy-700);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--navy-800)}
+.btn-outline{border-color:var(--navy-800);color:var(--navy-800)}
+.btn-outline:hover{background:var(--navy-800);color:#fff}
+.btn[disabled]{opacity:.65;cursor:not-allowed;transform:none}
+
+/* Header */
+.site-header{position:fixed;inset:0 0 auto 0;height:var(--header-h);z-index:100;display:flex;align-items:center;transition:background .3s,box-shadow .3s}
+.site-header.scrolled,.site-header.open{background:rgba(7,21,42,.96);backdrop-filter:blur(10px);box-shadow:0 8px 24px -16px rgba(0,0,0,.6)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:#fff}
+.logo-mark{position:relative;width:46px;height:46px;border-radius:12px;background:var(--navy-700);border:1px solid rgba(201,169,110,.55);display:grid;place-items:center;overflow:hidden;flex:none}
+.logo-mark img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text strong{font:600 1.15rem var(--serif);letter-spacing:.04em}
+.logo-text span{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-500)}
+.nav{display:flex;align-items:center;gap:1.5rem}
+.nav .btn{display:none}  /* the in-menu WhatsApp button is for the mobile menu only */
+.nav a.link{color:#E7ECF4;text-decoration:none;font-size:.93rem;font-weight:500;position:relative;padding:.4rem 0;white-space:nowrap}
+.nav a.link::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold-500);transition:width .25s}
+.nav a.link:hover::after,.nav a.link.active::after{width:100%}
+.header-cta{display:flex;align-items:center;gap:.7rem}
+.header-cta .btn{padding:.8rem 1.2rem;min-height:44px;font-size:.9rem}
+.menu-btn{display:none;width:48px;height:48px;border-radius:12px;border:1px solid rgba(255,255,255,.35);background:transparent;cursor:pointer;position:relative}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{position:absolute;left:13px;width:20px;height:2px;background:#fff;border-radius:2px;transition:transform .25s,top .25s,background .25s;content:""}
+.menu-btn span{top:22px}
+.menu-btn span::before{left:0;top:-7px}
+.menu-btn span::after{left:0;top:7px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;padding:calc(var(--header-h) + 48px) 0 96px;overflow:hidden;background:var(--navy-900)}
+.hero-media{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(7,21,42,.35),rgba(7,21,42,.85)),
+  radial-gradient(1200px 600px at 80% 20%,rgba(201,169,110,.28),transparent 60%),
+  linear-gradient(135deg,#0B1F3A,#13305A 60%,#0B1F3A)}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,21,42,.82) 0%,rgba(7,21,42,.45) 55%,rgba(7,21,42,.12) 100%),linear-gradient(0deg,rgba(7,21,42,.65),transparent 38%)}
+.hero-media.is-fallback{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='xMidYMax slice'%3E%3Cg fill='%23ffffff' fill-opacity='.06'%3E%3Crect x='40' y='120' width='90' height='180'/%3E%3Crect x='150' y='60' width='110' height='240'/%3E%3Crect x='280' y='150' width='80' height='150'/%3E%3Crect x='390' y='40' width='130' height='260'/%3E%3Crect x='540' y='110' width='100' height='190'/%3E%3Crect x='660' y='80' width='120' height='220'/%3E%3Crect x='800' y='140' width='90' height='160'/%3E%3Crect x='910' y='30' width='140' height='270'/%3E%3Crect x='1070' y='100' width='100' height='200'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(135deg,#0B1F3A,#13305A 60%,#0B1F3A);background-repeat:no-repeat;background-position:bottom;background-size:100% auto,cover}
+.hero-in{position:relative;z-index:2;max-width:780px}
+.hero .eyebrow{color:var(--gold-300)}
+.hero h1{color:#fff}
+.hero h1 em{font-style:italic;color:var(--gold-500)}
+.hero p.sub{font-size:1.2rem;color:#D6DEEB;max-width:56ch;margin-bottom:2rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem}
+.hero-tag{position:absolute;z-index:2;bottom:28px;left:0;right:0;color:#C5D0E2;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase}
+.hero-tag .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.2);padding-top:1rem}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px);align-items:center}
+.about-card{background:var(--navy-800);color:#fff;border-radius:var(--radius);padding:clamp(28px,4vw,48px);position:relative;box-shadow:var(--shadow)}
+.about-card::before{content:"";position:absolute;inset:14px;border:1px solid rgba(201,169,110,.45);border-radius:calc(var(--radius) - 6px);pointer-events:none}
+.about-card blockquote{margin:0;font:600 clamp(1.6rem,3vw,2.15rem)/1.25 var(--serif);color:#fff}
+.about-card cite{display:block;margin-top:1.4rem;font-style:normal;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-500)}
+.checks{list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:.8rem}
+.checks li{display:flex;gap:.8rem;align-items:flex-start}
+.checks .icon{color:var(--gold-700);width:22px;height:22px;margin-top:.2rem;stroke-width:2}
+
+/* Services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold-500)}
+.card .ico{width:56px;height:56px;border-radius:14px;background:var(--navy-800);color:var(--gold-500);display:grid;place-items:center;margin-bottom:1.3rem}
+.card p{color:var(--muted);font-size:1rem;flex:1}
+.card .more{color:var(--navy-800);font-weight:600;font-size:.92rem;text-decoration:none;display:inline-flex;gap:.5rem;align-items:center;margin-top:.4rem}
+.card .more .icon{width:18px;height:18px;transition:transform .2s}
+.card .more:hover .icon{transform:translateX(4px)}
+
+/* Project */
+.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.cover{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#13305A,#0B1F3A);box-shadow:0 30px 60px -30px #000;border:1px solid rgba(201,169,110,.4)}
+.cover img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;top:16px;left:16px;background:var(--gold-500);color:var(--navy-900);font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;padding:.45rem .9rem;border-radius:999px;z-index:2}
+.project-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.6rem}
+.gallery-head{margin:clamp(48px,6vw,72px) 0 24px;display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap}
+.gallery-head h3{margin:0;color:#fff}
+.gallery-head p{margin:0;color:#B9C5D9;font-size:.95rem}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.thumb{position:relative;padding:0;border:1px solid rgba(255,255,255,.18);border-radius:12px;overflow:hidden;cursor:zoom-in;background:var(--navy-700);aspect-ratio:3/4;transition:transform .25s,border-color .25s}
+.thumb:hover{transform:translateY(-4px);border-color:var(--gold-500)}
+.thumb img{width:100%;height:100%;object-fit:contain;background:#0d2342}
+.thumb .num{position:absolute;left:10px;bottom:10px;background:rgba(7,21,42,.85);color:var(--gold-300);font-size:.75rem;font-weight:600;letter-spacing:.1em;padding:.25rem .6rem;border-radius:999px;z-index:2}
+
+/* Shared image fallback panel */
+.has-fb{position:relative}
+.has-fb.is-fallback{display:grid;place-items:center;text-align:center;color:var(--gold-300);background:linear-gradient(135deg,#13305A,#0B1F3A)}
+.has-fb.is-fallback::after{content:attr(data-label);font:600 1.05rem/1.3 var(--serif);letter-spacing:.06em;padding:1rem;max-width:90%}
+.has-fb.is-fallback.logo-mark::after{font:700 .95rem var(--serif);padding:0;max-width:none;letter-spacing:.02em}
+
+/* Lightbox */
+dialog.lightbox{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100%;height:100%;color:#fff}
+dialog.lightbox::backdrop{background:rgba(3,10,22,.92)}
+.lb-in{height:100%;display:grid;grid-template-rows:auto 1fr;padding:16px}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;color:var(--gold-300);font-weight:600;letter-spacing:.08em;font-size:.9rem}
+.lb-stage{position:relative;display:grid;place-items:center;min-height:0}
+.lb-stage img{max-height:calc(100vh - 110px);max-width:min(100%,1000px);object-fit:contain;border-radius:8px;background:#0d2342}
+.lb-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center;font-size:1.4rem}
+.lb-btn:hover{background:var(--gold-500);color:var(--navy-900)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
+.lb-prev{left:4px}.lb-next{right:4px}
+
+/* Videos */
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.vcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .3s,transform .3s}
+.vcard:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+.vframe{aspect-ratio:16/10;background:linear-gradient(135deg,#13305A,#0B1F3A);position:relative}
+.vframe video{width:100%;height:100%;object-fit:cover;background:#0B1F3A}
+.vframe.is-fallback video{display:none}
+.vframe.is-fallback{display:grid;place-items:center;color:var(--gold-300);text-align:center}
+.vframe.is-fallback::after{content:attr(data-label);font:600 1.05rem/1.3 var(--serif);padding:1rem}
+.vcard .cap{padding:20px 22px}
+.vcard .cap h3{font-size:1.3rem;margin-bottom:.2rem}
+.vcard .cap p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s;position:relative}
+.step{position:relative;padding:34px 26px 28px;border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);background:rgba(255,255,255,.04)}
+.step::before{counter-increment:s;content:"0" counter(s);display:block;font:600 3rem/1 var(--serif);color:var(--gold-500);margin-bottom:1rem}
+.step p{color:#B9C5D9;margin:0;font-size:1rem}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-18px;top:44px;color:var(--gold-500);font-size:1.4rem;background:var(--navy-800);z-index:2;line-height:1;padding:2px}
+
+/* Why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.why .card{text-align:left}
+
+/* Enquiry */
+.enq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:start}
+.contact-list{list-style:none;padding:0;margin:2rem 0 0;display:grid;gap:1rem}
+.contact-list a{display:flex;gap:1rem;align-items:center;text-decoration:none;padding:1rem 1.2rem;border:1px solid var(--line);border-radius:14px;background:#fff;transition:border-color .2s,transform .2s}
+.contact-list a:hover{border-color:var(--gold-500);transform:translateX(4px)}
+.contact-list .ico{width:46px;height:46px;border-radius:12px;background:var(--navy-800);color:var(--gold-500);display:grid;place-items:center;flex:none}
+.contact-list small{display:block;color:var(--muted);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.contact-list strong{font-weight:600;word-break:break-word}
+form.enq{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,4vw,40px);box-shadow:var(--shadow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:18px}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:.4rem;color:var(--navy-800)}
+label .req{color:#B3261E}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:.9rem 1rem;border:1.5px solid #CFC9BB;border-radius:12px;background:#fff;color:var(--ink);min-height:50px;transition:border-color .2s,box-shadow .2s}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy-700);box-shadow:0 0 0 4px rgba(201,169,110,.35)}
+[aria-invalid="true"]{border-color:#B3261E}
+.err{color:#B3261E;font-size:.85rem;margin:.35rem 0 0;min-height:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.status{margin-top:1rem;padding:0;border-radius:12px;font-weight:500}
+.status.ok,.status.bad,.status.info{padding:1rem 1.2rem}
+.status.ok{background:#E8F4EC;color:#14532D;border:1px solid #9AD3AE}
+.status.bad{background:#FDECEA;color:#7A1C14;border:1px solid #F0A8A1}
+.status.info{background:#FFF6E0;color:#5A4210;border:1px solid #E8D08A}
+.status a{font-weight:600}
+.fine{font-size:.85rem;color:var(--muted);margin:1rem 0 0}
+
+/* Footer */
+footer{background:var(--navy-900);color:#B9C5D9;padding:56px 0 28px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer h4{font:600 .8rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-500);margin:0 0 1rem}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+footer a{text-decoration:none}
+footer a:hover{color:#fff;text-decoration:underline}
+.foot-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:22px;font-size:.88rem}
+
+/* Floating WhatsApp (mobile) */
+.fab{position:fixed;right:16px;bottom:16px;z-index:90;display:none;width:58px;height:58px;border-radius:50%;background:var(--gold-500);color:var(--navy-900);align-items:center;justify-content:center;box-shadow:0 12px 26px -8px rgba(0,0,0,.5)}
+.fab .icon{width:28px;height:28px}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.js-off .reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+
+/* Responsive */
+@media (max-width:1020px){
+  .cards,.videos{grid-template-columns:repeat(2,1fr)}
+  .steps,.why{grid-template-columns:repeat(2,1fr)}
+  .step:not(:last-child)::after{display:none}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:1100px){
+  .menu-btn{display:block}
+  .header-cta .btn{display:none}
+  .nav{position:fixed;inset:var(--header-h) 0 auto 0;background:rgba(7,21,42,.98);flex-direction:column;align-items:stretch;gap:0;padding:12px 20px 24px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s;max-height:calc(100svh - var(--header-h));overflow:auto}
+  .site-header.open .nav{transform:none;opacity:1;visibility:visible}
+  .nav a.link{padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:1.05rem;white-space:normal}
+  .nav a.link::after{display:none}
+  .nav .btn{display:inline-flex;margin-top:1rem}
+}
+@media (max-width:900px){
+  .about-grid,.project-grid,.enq-grid{grid-template-columns:1fr}
+  .fab{display:flex}
+}
+@media (max-width:640px){
+  :root{--header-h:68px}
+  .cards,.videos,.steps,.why{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,1fr);gap:12px}
+  .row{grid-template-columns:1fr;gap:0}
+  .foot-grid{grid-template-columns:1fr}
+  .hero{padding-bottom:110px}
+  .hero-actions .btn,.project-actions .btn{width:100%}
+  .logo-text span{display:none}
+  .hero-tag{display:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3 8 3v16M9 21v-4h6v4M8 9h2M14 9h2M8 13h2M14 13h2"/></symbol>
+    <symbol id="i-interior" viewBox="0 0 24 24"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M3 13a2 2 0 0 1 4 0v1h10v-1a2 2 0 0 1 4 0v5H3zM6 18v2M18 18v2"/></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 21h18"/></symbol>
+    <symbol id="i-draft" viewBox="0 0 24 24"><path d="M3 17L17 3l4 4L7 21H3zM13 7l4 4M10 10l2 2M7 13l2 2"/></symbol>
+    <symbol id="i-site" viewBox="0 0 24 24"><path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 6v4M9 17v-3M15 17v-3M2 21h20"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1.2-1.6-2-1-.9.8a4 4 0 0 1-2-2l.8-.9-1-2L9 8.5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5M3 17l9 5 9-5"/></symbol>
+  </defs>
+</svg>
+
+<!-- 1. HEADER -->
+<header class="site-header" id="top">
+  <div class="wrap header-in">
+    <a class="logo" href="#home" aria-label="MKN Real Estate Point, home">
+      <span class="logo-mark has-fb" data-label="MKN"><img src="assets/mkn-logo.png" alt="" width="46" height="46" onerror="mknImgFail(this)"></span>
+      <span class="logo-text"><strong>MKN Real Estate Point</strong><span>One team • Multiple property solutions</span></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#project">Speed Sanarelli</a>
+      <a class="link" href="#interiors">Interiors</a>
+      <a class="link" href="#process">Process</a>
+      <a class="link" href="#why">Why Us</a>
+      <a class="link" href="#enquire">Contact</a>
+      <a class="btn btn-gold" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn btn-gold" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 2. HERO -->
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-media has-fb" data-label="">
+    <img src="assets/hero-property.jpg" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" onerror="mknImgFail(this)">
+  </div>
+  <div class="wrap">
+    <div class="hero-in">
+      <span class="eyebrow">MKN Real Estate Point</span>
+      <h1 id="hero-title">From planning to property, we <em>help you move forward.</em></h1>
+      <p class="sub">One team • Multiple property solutions. Residential projects, interiors, home loan assistance and site support, with one team to talk to.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#enquire">Enquire now <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-tag" aria-hidden="true"><div class="wrap"><span>Requirement</span><span>Assessment</span><span>Connect</span><span>Execution</span></div></div>
+</section>
+
+<!-- 3. ABOUT -->
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow">About us</span>
+      <h2 id="about-title">About MKN Real Estate Point</h2>
+      <p class="lead">MKN Real Estate Point is a property solutions team that helps you through every stage of a property decision, from the first idea to the finished home.</p>
+      <p>Buying a flat, finishing an interior, arranging a home loan or planning a small building can mean dealing with many different people. We bring these steps together so you have one team to talk to, clear information at each stage, and support until the work is done.</p>
+      <ul class="checks">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>One point of contact across projects, interiors, finance and site support</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Straightforward guidance based on your requirement and budget</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Reach us directly on WhatsApp or email, with no middlemen</span></li>
+      </ul>
+    </div>
+    <div class="about-card reveal">
+      <blockquote>“From planning to property, we help you move forward.”</blockquote>
+      <cite>MKN Real Estate Point</cite>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SERVICES -->
+<section id="services" class="ivory" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2 id="services-title">Our services</h2>
+      <p class="lead">Multiple property solutions, one team. Choose a single service or let us coordinate the whole journey.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></div>
+        <h3>Residential project sales</h3>
+        <p>Flats and residential projects presented clearly, with help comparing options and arranging enquiries and site visits.</p>
+        <a class="more" href="#enquire" data-req="Residential project sales">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-interior"/></svg></div>
+        <h3>Interior design and execution</h3>
+        <p>From design ideas to on-site execution, we help you plan and complete interiors that suit how you live.</p>
+        <a class="more" href="#enquire" data-req="Interior design and execution">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-bank"/></svg></div>
+        <h3>Home loan assistance</h3>
+        <p>Guidance on the home loan process, from understanding your options to preparing for your application.</p>
+        <a class="more" href="#enquire" data-req="Home loan assistance">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-draft"/></svg></div>
+        <h3>Architecture and design coordination</h3>
+        <p>We help connect your plans with architects and designers and keep the requirements aligned from drawing to site.</p>
+        <a class="more" href="#enquire" data-req="Architecture and design coordination">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-site"/></svg></div>
+        <h3>Pre-construction and site support</h3>
+        <p>Support in the planning stage and on site, so decisions are made with clarity before and during construction.</p>
+        <a class="more" href="#enquire" data-req="Pre-construction and site support">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></div>
+        <h3>Small-scale building solutions</h3>
+        <p>Practical help for smaller building needs, with planning and coordination handled by one team.</p>
+        <a class="more" href="#enquire" data-req="Small-scale building solutions">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. FEATURED PROJECT -->
+<section id="project" class="dark" aria-labelledby="project-title">
+  <div class="wrap">
+    <div class="project-grid">
+      <div class="reveal">
+        <span class="eyebrow">Featured project</span>
+        <h2 id="project-title">Speed Sanarelli</h2>
+        <p class="lead">Flats for sale at Speed Sanarelli.</p>
+        <p>Speed Sanarelli is a residential project we are presenting through MKN Real Estate Point. Browse the project brochure below, then get in touch to ask about availability, pricing, floor plans and site visits. We will share the details directly and answer your questions.</p>
+        <div class="project-actions">
+          <a class="btn btn-gold" href="#enquire" data-req="Speed Sanarelli flats" data-msg="I would like to enquire about flats at Speed Sanarelli.">Enquire about Speed Sanarelli <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" data-wa data-wa-text="Hello MKN Real Estate Point, I would like to enquire about flats at Speed Sanarelli." href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+        </div>
+      </div>
+      <div class="cover has-fb reveal" data-label="Speed Sanarelli">
+        <span class="badge">Flats for sale</span>
+        <img src="assets/speed-sanarelli-cover.jpg" alt="Speed Sanarelli residential project" width="1200" height="900" loading="lazy" decoding="async" onerror="mknImgFail(this)">
+      </div>
+    </div>
+
+    <div class="gallery-head reveal">
+      <h3>Project brochure</h3>
+      <p>Eight pages. Tap any page to view it larger.</p>
+    </div>
+    <div class="gallery" id="gallery"><!-- thumbnails inserted by script below; static fallback list is also valid --></div>
+  </div>
+</section>
+
+<!-- 6. INTERIOR SHOWCASE -->
+<section id="interiors" aria-labelledby="interiors-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Interior showcase</span>
+      <h2 id="interiors-title">Interiors in motion</h2>
+      <p class="lead">A look at interior work we coordinate and execute. Press play to watch.</p>
+    </div>
+    <div class="videos">
+      <article class="vcard reveal">
+        <div class="vframe" data-label="Interior video 01">
+          <video controls preload="none" playsinline poster="assets/interior-01-poster.jpg" aria-label="Interior showcase video 1"><source src="assets/interior-01.mp4" type="video/mp4">Your browser does not support HTML video.</video>
+        </div>
+        <div class="cap"><h3>Interior showcase 01</h3><p>Interior design and execution</p></div>
+      </article>
+      <article class="vcard reveal">
+        <div class="vframe" data-label="Interior video 02">
+          <video controls preload="none" playsinline poster="assets/interior-02-poster.jpg" aria-label="Interior showcase video 2"><source src="assets/interior-02.mp4" type="video/mp4">Your browser does not support HTML video.</video>
+        </div>
+        <div class="cap"><h3>Interior showcase 02</h3><p>Interior design and execution</p></div>
+      </article>
+      <article class="vcard reveal">
+        <div class="vframe" data-label="Interior video 03">
+          <video controls preload="none" playsinline poster="assets/interior-03-poster.jpg" aria-label="Interior showcase video 3"><source src="assets/interior-03.mp4" type="video/mp4">Your browser does not support HTML video.</video>
+        </div>
+        <div class="cap"><h3>Interior showcase 03</h3><p>Interior design and execution</p></div>
+      </article>
+    </div>
+    <p style="margin-top:28px" class="reveal"><a class="btn btn-outline" href="#enquire" data-req="Interior design and execution">Plan your interiors <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<!-- 7. PROCESS -->
+<section id="process" class="dark" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2 id="process-title">Our process</h2>
+      <p class="lead">Four simple steps from first conversation to finished work.</p>
+    </div>
+    <ol class="steps" style="list-style:none;padding:0;margin:0">
+      <li class="step reveal"><h3>Requirement</h3><p>Tell us what you need: a home, interiors, a loan, or support on site.</p></li>
+      <li class="step reveal"><h3>Assessment</h3><p>We review your needs, budget and options and give you honest guidance.</p></li>
+      <li class="step reveal"><h3>Connect</h3><p>We connect you with the right project, partners or professionals for the job.</p></li>
+      <li class="step reveal"><h3>Execution</h3><p>We stay involved and help carry the work through to completion.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8. WHY CHOOSE US -->
+<section id="why" class="ivory" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why MKN</span>
+      <h2 id="why-title">Why choose us</h2>
+    </div>
+    <div class="why">
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
+        <h3>Genuine Projects</h3>
+        <p>We share project information as it is, so you can decide with confidence.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></div>
+        <h3>Clear Communication</h3>
+        <p>Plain answers, quick replies on WhatsApp, and no confusing jargon.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-bank"/></svg></div>
+        <h3>Loan Support</h3>
+        <p>Help understanding and preparing for the home loan process.</p>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div>
+        <h3>End-to-End Solutions</h3>
+        <p>From planning to property, one team supports each stage.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 9 & 10. ENQUIRY + CONTACT -->
+<section id="enquire" aria-labelledby="enq-title">
+  <div class="wrap enq-grid">
+    <div class="reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2 id="enq-title">Start your enquiry</h2>
+      <p class="lead">Tell us what you are looking for and we will get back to you. Prefer to talk now? Message us directly.</p>
+      <ul class="contact-list">
+        <li><a data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><strong>+91 8466098440</strong></span></a></li>
+        <li><a data-mail href="mailto:Krishnanaikm8@gmail.com"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small><strong>Krishnanaikm8@gmail.com</strong></span></a></li>
+      </ul>
+    </div>
+
+    <form class="enq reveal" id="enqForm" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="e-name">
+          <p class="err" id="e-name" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="e.g. 98765 43210" aria-describedby="e-phone">
+          <p class="err" id="e-phone" role="alert"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="f-req">Requirement <span class="req" aria-hidden="true">*</span></label>
+          <select id="f-req" name="requirement" required aria-describedby="e-req">
+            <option value="">Select a requirement</option>
+            <option>Speed Sanarelli flats</option>
+            <option>Residential project sales</option>
+            <option>Interior design and execution</option>
+            <option>Home loan assistance</option>
+            <option>Architecture and design coordination</option>
+            <option>Pre-construction and site support</option>
+            <option>Small-scale building solutions</option>
+            <option>Other</option>
+          </select>
+          <p class="err" id="e-req" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="f-budget">Budget</label>
+          <select id="f-budget" name="budget">
+            <option value="">Prefer to discuss</option>
+            <option>Under ₹25 lakh</option>
+            <option>₹25 lakh – ₹50 lakh</option>
+            <option>₹50 lakh – ₹1 crore</option>
+            <option>Above ₹1 crore</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-msg">Message</label>
+        <textarea id="f-msg" name="message" maxlength="1000" placeholder="Anything else we should know?"></textarea>
+      </div>
+      <!-- Honeypot: real visitors never see or fill this -->
+      <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <button class="btn btn-gold" id="submitBtn" type="submit" style="width:100%">Send enquiry <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <div id="formStatus" class="status" role="status" aria-live="polite"></div>
+      <p class="fine">Your details are used only to respond to your enquiry.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="logo-text" style="color:#fff;margin-bottom:.8rem"><strong style="font-size:1.4rem">MKN Real Estate Point</strong><span>One team • Multiple property solutions</span></p>
+        <p>From planning to property, we help you move forward.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#project">Speed Sanarelli</a></li>
+          <li><a href="#interiors">Interiors</a></li>
+          <li><a href="#process">Process</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener">WhatsApp: +91 8466098440</a></li>
+          <li><a data-mail href="mailto:Krishnanaikm8@gmail.com">Krishnanaikm8@gmail.com</a></li>
+          <li><a href="#enquire">Send an enquiry</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> MKN Real Estate Point. All rights reserved.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener" aria-label="Chat with MKN Real Estate Point on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<!-- Brochure lightbox -->
+<dialog class="lightbox" id="lightbox" aria-label="Brochure page viewer">
+  <div class="lb-in">
+    <div class="lb-bar"><span id="lbCount"></span><button class="lb-btn" id="lbClose" aria-label="Close viewer" type="button">✕</button></div>
+    <div class="lb-stage">
+      <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous page" type="button">‹</button>
+      <img id="lbImg" alt="">
+      <button class="lb-btn lb-next" id="lbNext" aria-label="Next page" type="button">›</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ==========================================================================
+     CONFIGURATION: paste your deployed Google Apps Script Web App URL here.
+     It looks like: https://script.google.com/macros/s/XXXXXXXX/exec
+     Until this is filled in, the form will NOT claim to have sent anything.
+     See README.md for the deployment steps.
+     ========================================================================== */
+  var FORM_ENDPOINT = '';
+
+  var WA_NUMBER = '918466098440';
+  var EMAIL = 'Krishnanaikm8@gmail.com';
+
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ---- Year ---- */
+  $('#year').textContent = new Date().getFullYear();
+
+  /* ---- WhatsApp / mailto helpers (consistent numbers everywhere) ---- */
+  $$('[data-wa]').forEach(function (a) {
+    var text = a.getAttribute('data-wa-text') || 'Hello MKN Real Estate Point, I would like to know more about your property services.';
+    a.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
+  });
+  $$('[data-mail]').forEach(function (a) {
+    a.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Enquiry: MKN Real Estate Point');
+  });
+
+  /* ---- Header: scrolled state + mobile menu ---- */
+  var header = $('.site-header');
+  var menuBtn = $('#menuBtn');
+  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 24); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  function setMenu(open) {
+    header.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  menuBtn.addEventListener('click', function () { setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'); });
+  $$('#nav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 1100) setMenu(false); });
+
+  /* ---- Active nav link on scroll ---- */
+  var links = $$('#nav a.link');
+  var map = {};
+  links.forEach(function (l) { map[l.getAttribute('href').slice(1)] = l; });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          links.forEach(function (l) { l.classList.remove('active'); });
+          map[en.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(map).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+
+    /* ---- Reveal on scroll ---- */
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    $$('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    $$('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---- Catch images that failed before the script ran ---- */
+  $$('img[onerror]').forEach(function (img) {
+    if (img.complete && img.naturalWidth === 0 && img.getAttribute('src')) window.mknImgFail(img);
+  });
+
+  /* ---- Videos: graceful fallback if the file is missing ---- */
+  $$('.vframe video').forEach(function (v) {
+    var frame = v.parentElement;
+    var fail = function () { frame.classList.add('is-fallback'); frame.setAttribute('data-label', frame.getAttribute('data-label') + ' (coming soon)'); };
+    var src = v.querySelector('source');
+    if (src) src.addEventListener('error', fail);
+    v.addEventListener('error', fail);
+  });
+
+  /* ---- Brochure gallery + lightbox ---- */
+  var pages = [];
+  for (var i = 1; i <= 8; i++) pages.push('assets/sanarelli-page-0' + i + '.jpg');
+  var gallery = $('#gallery');
+  pages.forEach(function (src, idx) {
+    var n = idx + 1;
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'thumb has-fb';
+    b.setAttribute('data-label', 'Brochure page ' + n);
+    b.setAttribute('aria-label', 'Open Speed Sanarelli brochure page ' + n + ' of 8');
+    b.innerHTML = '<img src="' + src + '" alt="Speed Sanarelli brochure page ' + n + '" width="600" height="800" loading="lazy" decoding="async" onerror="mknImgFail(this)"><span class="num">' + (n < 10 ? '0' + n : n) + '</span>';
+    b.addEventListener('click', function () { openLb(idx, b); });
+    gallery.appendChild(b);
+  });
+
+  var lb = $('#lightbox'), lbImg = $('#lbImg'), lbCount = $('#lbCount');
+  var cur = 0, opener = null;
+  function showLb(i) {
+    cur = (i + pages.length) % pages.length;
+    lbImg.style.display = '';
+    lbImg.onerror = function () { lbImg.style.display = 'none'; lbCount.textContent = 'Brochure page ' + (cur + 1) + ' of ' + pages.length + ' (image not available yet)'; };
+    lbImg.src = pages[cur];
+    lbImg.alt = 'Speed Sanarelli brochure page ' + (cur + 1);
+    lbCount.textContent = 'Page ' + (cur + 1) + ' of ' + pages.length;
+  }
+  function openLb(i, from) {
+    opener = from;
+    showLb(i);
+    if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
+    document.body.style.overflow = 'hidden';
+    $('#lbClose').focus();
+  }
+  function closeLb() {
+    if (typeof lb.close === 'function') lb.close(); else lb.removeAttribute('open');
+  }
+  lb.addEventListener('close', function () { document.body.style.overflow = ''; if (opener) opener.focus(); });
+  $('#lbClose').addEventListener('click', closeLb);
+  $('#lbPrev').addEventListener('click', function () { showLb(cur - 1); });
+  $('#lbNext').addEventListener('click', function () { showLb(cur + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+  lb.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') showLb(cur - 1);
+    if (e.key === 'ArrowRight') showLb(cur + 1);
+  });
+
+  /* ---- Pre-fill requirement from service / project buttons ---- */
+  var reqSel = $('#f-req'), msgBox = $('#f-msg');
+  $$('[data-req]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var val = a.getAttribute('data-req');
+      for (var i = 0; i < reqSel.options.length; i++) {
+        if (reqSel.options[i].text === val) { reqSel.selectedIndex = i; break; }
+      }
+      var m = a.getAttribute('data-msg');
+      if (m && !msgBox.value.trim()) msgBox.value = m;
+    });
+  });
+
+  /* ---- Enquiry form ---- */
+  var form = $('#enqForm'), btn = $('#submitBtn'), statusEl = $('#formStatus');
+  var submitting = false;
+  var btnHTML = btn.innerHTML;
+
+  function phoneOk(raw) {
+    var p = String(raw).replace(/[\s\-().]/g, '');
+    return /^(?:\+?91|0)?[6-9]\d{9}$/.test(p) || /^\+[1-9]\d{7,14}$/.test(p);
+  }
+  function setErr(id, input, msg) {
+    $('#' + id).textContent = msg || '';
+    if (msg) input.setAttribute('aria-invalid', 'true'); else input.removeAttribute('aria-invalid');
+  }
+  function setStatus(kind, html) {
+    statusEl.className = 'status ' + (kind || '');
+    statusEl.innerHTML = html || '';
+  }
+  function waLink(label) {
+    return '<a href="https://wa.me/' + WA_NUMBER + '" target="_blank" rel="noopener">' + label + '</a>';
+  }
+  function mailLink() {
+    return '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>';
+  }
+
+  function validate() {
+    var f = form.elements, ok = true, first = null;
+    function bad(id, el, msg) { setErr(id, el, msg); ok = false; if (!first) first = el; }
+    var name = f.name.value.trim();
+    if (name.length < 2) bad('e-name', f.name, 'Please enter your name.'); else setErr('e-name', f.name, '');
+    if (!f.phone.value.trim()) bad('e-phone', f.phone, 'Please enter your phone number.');
+    else if (!phoneOk(f.phone.value)) bad('e-phone', f.phone, 'Enter a valid phone number, e.g. 98765 43210 or +91 98765 43210.');
+    else setErr('e-phone', f.phone, '');
+    if (!f.requirement.value) bad('e-req', f.requirement, 'Please choose a requirement.'); else setErr('e-req', f.requirement, '');
+    if (first) first.focus();
+    return ok;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (submitting) return;                       // block duplicate submits
+    setStatus('', '');
+    if (!validate()) return;
+
+    var f = form.elements;
+    if (f.website.value) {                        // honeypot tripped: pretend success, send nothing
+      setStatus('ok', 'Thank you! We have received your enquiry.');
+      form.reset();
+      return;
+    }
+
+    if (!FORM_ENDPOINT) {
+      setStatus('info', 'Online enquiries are not switched on yet, so your message has <strong>not</strong> been sent. Please reach us on ' + waLink('WhatsApp (+91 8466098440)') + ' or email ' + mailLink() + '.');
+      return;
+    }
+
+    var payload = {
+      name: f.name.value.trim(),
+      phone: f.phone.value.trim(),
+      requirement: f.requirement.value,
+      budget: f.budget.value,
+      message: f.message.value.trim(),
+      website: '',
+      page: location.href.split('#')[0]
+    };
+
+    submitting = true;
+    btn.disabled = true;
+    btn.setAttribute('aria-busy', 'true');
+    btn.textContent = 'Sending…';
+
+    var ctrl = ('AbortController' in window) ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 25000) : null;
+
+    // text/plain keeps this a "simple" request so Apps Script needs no CORS preflight.
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload),
+      redirect: 'follow',
+      signal: ctrl ? ctrl.signal : undefined
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data.ok) {
+          setStatus('ok', '<strong>Thank you, ' + escapeHTML(payload.name) + '!</strong> Your enquiry has been received and we will contact you soon.');
+          form.reset();
+          $$('[aria-invalid]', form).forEach(function (el) { el.removeAttribute('aria-invalid'); });
+        } else {
+          if (data && data.fieldErrors) {
+            if (data.fieldErrors.name) setErr('e-name', f.name, data.fieldErrors.name);
+            if (data.fieldErrors.phone) setErr('e-phone', f.phone, data.fieldErrors.phone);
+            if (data.fieldErrors.requirement) setErr('e-req', f.requirement, data.fieldErrors.requirement);
+          }
+          setStatus('bad', escapeHTML((data && data.message) || 'Something went wrong.') + ' Please try again, or contact us on ' + waLink('WhatsApp') + '.');
+        }
+      })
+      .catch(function () {
+        setStatus('bad', 'We could not confirm that your enquiry was sent. Please check your connection and try again, or contact us on ' + waLink('WhatsApp (+91 8466098440)') + ' or ' + mailLink() + '.');
+      })
+      .then(function () {                         // always runs
+        if (timer) clearTimeout(timer);
+        submitting = false;
+        btn.disabled = false;
+        btn.removeAttribute('aria-busy');
+        btn.innerHTML = btnHTML;
+      });
+  });
+
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; });
+  }
+})();
+</script>
+</body>
+</html>
