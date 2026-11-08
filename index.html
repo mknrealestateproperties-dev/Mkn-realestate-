@@ -3,23 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MKN Real Estate Point | One team • Multiple property solutions</title>
-<meta name="description" content="MKN Real Estate Point helps you move from planning to property: residential project sales, interior design and execution, home loan assistance, architecture coordination and site support.">
+<title>MKN Real Estate Properties | One team • Multiple property solutions</title>
+<meta name="description" content="MKN Real Estate Properties serves Hyderabad and nearby areas, helping you move from planning to property: residential project sales, interior design and execution, home loan assistance, architecture coordination and site support.">
 <meta name="theme-color" content="#0B1F3A">
 
-<!-- Social sharing.
-     NOTE: og:image / og:url must be ABSOLUTE URLs for most platforms to show a preview.
-     After publishing, replace the two values marked PUBLISHED-URL below
-     with your real GitHub Pages address (see README.md, step "Finish SEO"). -->
+<!-- Social sharing: absolute URLs use the custom domain https://mknrealestate.in/ -->
+<link rel="canonical" href="https://mknrealestate.in/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="MKN Real Estate Point">
-<meta property="og:title" content="MKN Real Estate Point | One team • Multiple property solutions">
+<meta property="og:url" content="https://mknrealestate.in/">
+<meta property="og:site_name" content="MKN Real Estate Properties">
+<meta property="og:title" content="MKN Real Estate Properties | One team • Multiple property solutions">
 <meta property="og:description" content="From planning to property, we help you move forward. Residential projects, interiors, home loan assistance and more.">
-<meta property="og:image" content="assets/hero-property.jpg"><!-- PUBLISHED-URL: make absolute -->
+<meta property="og:image" content="https://mknrealestate.in/assets/hero-property.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MKN Real Estate Point">
+<meta name="twitter:title" content="MKN Real Estate Properties">
 <meta name="twitter:description" content="From planning to property, we help you move forward.">
-<meta name="twitter:image" content="assets/hero-property.jpg"><!-- PUBLISHED-URL: make absolute -->
+<meta name="twitter:image" content="https://mknrealestate.in/assets/hero-property.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1F3A'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23C9A96E'%3EMKN%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,11 +29,14 @@
 {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
-  "name": "MKN Real Estate Point",
+  "name": "MKN Real Estate Properties",
+  "url": "https://mknrealestate.in/",
+  "areaServed": {"@type": "City", "name": "Hyderabad"},
   "slogan": "One team • Multiple property solutions",
   "description": "Residential project sales, interior design and execution, home loan assistance, architecture and design coordination, pre-construction and site support, and small-scale building solutions.",
   "email": "MKNrealestateproperties@gmail.com",
-  "telephone": "+91 8466098440"
+  "telephone": "+91 8466098440",
+  "sameAs": ["https://www.instagram.com/mknrealestateproperties","https://www.facebook.com/profile.php?id=61596001301210","https://youtube.com/@mknrealestateproperties"]
 }
 </script>
 
@@ -141,7 +143,8 @@ section{padding:clamp(64px,9vw,112px) 0}
   radial-gradient(1200px 600px at 80% 20%,rgba(201,169,110,.28),transparent 60%),
   linear-gradient(135deg,#0B1F3A,#13305A 60%,#0B1F3A)}
 .hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,21,42,.82) 0%,rgba(7,21,42,.45) 55%,rgba(7,21,42,.12) 100%),linear-gradient(0deg,rgba(7,21,42,.65),transparent 38%)}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,21,42,.96) 0%,rgba(7,21,42,.88) 38%,rgba(7,21,42,.45) 70%,rgba(7,21,42,.15) 100%),linear-gradient(0deg,rgba(7,21,42,.7),transparent 38%)}
+@media (max-width:900px){.hero-media::after{background:linear-gradient(180deg,rgba(7,21,42,.9),rgba(7,21,42,.82))}}
 .hero-media.is-fallback{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='xMidYMax slice'%3E%3Cg fill='%23ffffff' fill-opacity='.06'%3E%3Crect x='40' y='120' width='90' height='180'/%3E%3Crect x='150' y='60' width='110' height='240'/%3E%3Crect x='280' y='150' width='80' height='150'/%3E%3Crect x='390' y='40' width='130' height='260'/%3E%3Crect x='540' y='110' width='100' height='190'/%3E%3Crect x='660' y='80' width='120' height='220'/%3E%3Crect x='800' y='140' width='90' height='160'/%3E%3Crect x='910' y='30' width='140' height='270'/%3E%3Crect x='1070' y='100' width='100' height='200'/%3E%3C/g%3E%3C/svg%3E"),linear-gradient(135deg,#0B1F3A,#13305A 60%,#0B1F3A);background-repeat:no-repeat;background-position:bottom;background-size:100% auto,cover}
 .hero-in{position:relative;z-index:2;max-width:780px}
 .hero .eyebrow{color:var(--gold-300)}
@@ -172,38 +175,40 @@ section{padding:clamp(64px,9vw,112px) 0}
 .card .more .icon{width:18px;height:18px;transition:transform .2s}
 .card .more:hover .icon{transform:translateX(4px)}
 
-/* Project */
-.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
-.cover{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#13305A,#0B1F3A);box-shadow:0 30px 60px -30px #000;border:1px solid rgba(201,169,110,.4)}
-.cover img{width:100%;height:100%;object-fit:cover}
-.badge{position:absolute;top:16px;left:16px;background:var(--gold-500);color:var(--navy-900);font-weight:600;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;padding:.45rem .9rem;border-radius:999px;z-index:2}
-.project-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.6rem}
-.gallery-head{margin:clamp(48px,6vw,72px) 0 24px;display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap}
-.gallery-head h3{margin:0;color:#fff}
-.gallery-head p{margin:0;color:#B9C5D9;font-size:.95rem}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.thumb{position:relative;padding:0;border:1px solid rgba(255,255,255,.18);border-radius:12px;overflow:hidden;cursor:zoom-in;background:var(--navy-700);aspect-ratio:3/4;transition:transform .25s,border-color .25s}
-.thumb:hover{transform:translateY(-4px);border-color:var(--gold-500)}
-.thumb img{width:100%;height:100%;object-fit:contain;background:#0d2342}
-.thumb .num{position:absolute;left:10px;bottom:10px;background:rgba(7,21,42,.85);color:var(--gold-300);font-size:.75rem;font-weight:600;letter-spacing:.1em;padding:.25rem .6rem;border-radius:999px;z-index:2}
-
+/* Projects */
+.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin:0 0 28px}
+.filter{font:600 .9rem var(--sans);padding:.7rem 1.3rem;min-height:44px;border-radius:999px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.filter:hover{border-color:var(--gold-500)}
+.filter[aria-pressed="true"]{background:var(--gold-500);border-color:var(--gold-500);color:var(--navy-900)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.proj{background:#fff;color:var(--ink);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 50px -30px #000;transition:transform .3s}
+.proj:hover{transform:translateY(-6px)}
+.proj[hidden]{display:none}
+.proj-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#13305A,#0B1F3A)}
+.proj-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.proj:hover .proj-img img{transform:scale(1.06)}
+.pstatus{position:absolute;top:14px;left:14px;z-index:2;background:var(--gold-500);color:var(--navy-900);font-weight:600;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.4rem .8rem;border-radius:999px}
+.pstatus.ready{background:#25D366;color:#fff}
+.proj-body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.proj-body h3{margin:0 0 .2rem;font-size:1.55rem;color:var(--navy-800)}
+.loc{display:flex;gap:.4rem;align-items:center;color:var(--muted);font-size:.95rem;margin:0 0 1rem}
+.loc .icon{width:16px;height:16px;color:var(--gold-700)}
+.specs{margin:0 0 1rem;padding:0;display:grid;gap:.45rem;font-size:.95rem}
+.specs div{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed var(--line);padding-bottom:.45rem}
+.specs dt{color:var(--muted)}
+.specs dd{margin:0;font-weight:600;text-align:right}
+.chips{list-style:none;margin:0 0 1.2rem;padding:0;display:flex;flex-wrap:wrap;gap:.4rem;flex:1;align-content:flex-start}
+.chips li{font-size:.78rem;background:var(--ivory);border:1px solid var(--line);color:var(--navy-800);padding:.25rem .65rem;border-radius:999px}
+.proj-actions{display:flex;gap:.6rem}
+.proj-actions .btn{flex:1;padding:.9rem 1rem;font-size:.9rem}
+.proj-note{margin:28px 0 0;color:#B9C5D9;font-size:.88rem}
 /* Shared image fallback panel */
 .has-fb{position:relative}
+.hero-media.has-fb{position:absolute}
 .has-fb.is-fallback{display:grid;place-items:center;text-align:center;color:var(--gold-300);background:linear-gradient(135deg,#13305A,#0B1F3A)}
 .has-fb.is-fallback::after{content:attr(data-label);font:600 1.05rem/1.3 var(--serif);letter-spacing:.06em;padding:1rem;max-width:90%}
+.hero-media.is-fallback::after{content:"";max-width:none;padding:0;font:inherit;letter-spacing:0}
 .has-fb.is-fallback.logo-mark::after{font:700 .95rem var(--serif);padding:0;max-width:none;letter-spacing:.02em}
-
-/* Lightbox */
-dialog.lightbox{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100%;height:100%;color:#fff}
-dialog.lightbox::backdrop{background:rgba(3,10,22,.92)}
-.lb-in{height:100%;display:grid;grid-template-rows:auto 1fr;padding:16px}
-.lb-bar{display:flex;justify-content:space-between;align-items:center;color:var(--gold-300);font-weight:600;letter-spacing:.08em;font-size:.9rem}
-.lb-stage{position:relative;display:grid;place-items:center;min-height:0}
-.lb-stage img{max-height:calc(100vh - 110px);max-width:min(100%,1000px);object-fit:contain;border-radius:8px;background:#0d2342}
-.lb-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;display:grid;place-items:center;font-size:1.4rem}
-.lb-btn:hover{background:var(--gold-500);color:var(--navy-900)}
-.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%)}
-.lb-prev{left:4px}.lb-next{right:4px}
 
 /* Videos */
 .videos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -256,8 +261,13 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy-700
 .status a{font-weight:600}
 .fine{font-size:.85rem;color:var(--muted);margin:1rem 0 0}
 
+.social{display:flex;gap:.7rem;margin-top:1rem}
+.social a{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;border:1px solid rgba(201,169,110,.5);color:var(--gold-500);transition:background .2s,color .2s,transform .2s}
+.social a:hover{background:var(--gold-500);color:var(--navy-900);transform:translateY(-2px)}
+.social .icon{width:22px;height:22px}
+.enq-grid .social a{background:var(--navy-800)}
 /* Footer */
-footer{background:var(--navy-900);color:#B9C5D9;padding:56px 0 28px}
+footer{background:var(--navy-900);color:#B9C5D9;padding:56px 0 100px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
 footer h4{font:600 .8rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-500);margin:0 0 1rem}
 footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
@@ -268,6 +278,42 @@ footer a:hover{color:#fff;text-decoration:underline}
 /* Floating WhatsApp (mobile) */
 .fab{position:fixed;right:16px;bottom:16px;z-index:90;display:none;width:58px;height:58px;border-radius:50%;background:var(--gold-500);color:var(--navy-900);align-items:center;justify-content:center;box-shadow:0 12px 26px -8px rgba(0,0,0,.5)}
 .fab .icon{width:28px;height:28px}
+
+
+/* Service cards with photos */
+.card.svc{padding:0;overflow:hidden}
+.svc-img{aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#13305A,#0B1F3A)}
+.svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card.svc:hover .svc-img img{transform:scale(1.07)}
+.svc-body{padding:0 28px 28px;display:flex;flex-direction:column;flex:1}
+.svc .ico{margin-top:-30px;position:relative;z-index:2;border:4px solid #fff;box-shadow:0 8px 18px -8px rgba(7,21,42,.5)}
+/* About card with photo */
+.about-card{background:linear-gradient(rgba(7,21,42,.72),rgba(7,21,42,.9)),url("https://images.unsplash.com/photo-1784853879843-f3c5aacf2569?auto=format&fit=crop&q=75&w=900") center/cover,var(--navy-800);min-height:380px;display:flex;flex-direction:column;justify-content:flex-end}
+/* CTA band */
+.cta-band{position:relative;color:#fff;text-align:center;padding:clamp(72px,10vw,120px) 0;background:linear-gradient(rgba(7,21,42,.8),rgba(7,21,42,.86)),url("https://images.unsplash.com/photo-1758448756207-54505680d130?auto=format&fit=crop&q=75&w=1600") center/cover fixed,var(--navy-800)}
+.cta-band h2{color:#fff;max-width:20ch;margin-inline:auto}
+.cta-band p{color:#D6DEEB;max-width:52ch;margin:0 auto 2rem}
+.cta-band .actions{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1EBE5A;transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(37,211,102,.9)}
+/* Coloured social icons */
+.social a{border:0;color:#fff;box-shadow:0 8px 18px -10px rgba(0,0,0,.6)}
+.social a:hover{color:#fff;filter:brightness(1.1);transform:translateY(-3px)}
+.social a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.social a.fb{background:#1877F2}
+.social a.yt{background:#FF0000}
+.social a.wa{background:#25D366}
+.enq-grid .social a{background:none}
+.enq-grid .social a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%)}
+.enq-grid .social a.fb{background:#1877F2}
+.enq-grid .social a.yt{background:#FF0000}
+.enq-grid .social a.wa{background:#25D366}
+/* Floating WhatsApp: all screens */
+.fab{display:flex!important;right:18px;bottom:18px;width:auto;height:58px;padding:0 20px 0 16px;gap:.6rem;border-radius:999px;background:#25D366;color:#fff;font:600 .95rem var(--sans);text-decoration:none;box-shadow:0 14px 30px -10px rgba(37,211,102,.8);transition:transform .2s,background .2s}
+.fab:hover{background:#1EBE5A;transform:translateY(-3px)}
+.fab::before{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@media (max-width:640px){.fab{width:58px;padding:0;justify-content:center}.fab span{display:none}.cta-band{background-attachment:scroll}}
 
 /* Reveal animations */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
@@ -284,7 +330,7 @@ footer a:hover{color:#fff;text-decoration:underline}
   .cards,.videos{grid-template-columns:repeat(2,1fr)}
   .steps,.why{grid-template-columns:repeat(2,1fr)}
   .step:not(:last-child)::after{display:none}
-  .gallery{grid-template-columns:repeat(3,1fr)}
+  .projects{grid-template-columns:repeat(2,1fr)}
   .foot-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:1100px){
@@ -298,12 +344,11 @@ footer a:hover{color:#fff;text-decoration:underline}
 }
 @media (max-width:900px){
   .about-grid,.project-grid,.enq-grid{grid-template-columns:1fr}
-  .fab{display:flex}
 }
 @media (max-width:640px){
   :root{--header-h:68px}
   .cards,.videos,.steps,.why{grid-template-columns:1fr}
-  .gallery{grid-template-columns:repeat(2,1fr);gap:12px}
+  .projects{grid-template-columns:1fr}
   .row{grid-template-columns:1fr;gap:0}
   .foot-grid{grid-template-columns:1fr}
   .hero{padding-bottom:110px}
@@ -327,6 +372,10 @@ footer a:hover{color:#fff;text-decoration:underline}
     <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></symbol>
     <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1.2-1.6-2-1-.9.8a4 4 0 0 1-2-2l.8-.9-1-2L9 8.5z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
@@ -338,15 +387,15 @@ footer a:hover{color:#fff;text-decoration:underline}
 <!-- 1. HEADER -->
 <header class="site-header" id="top">
   <div class="wrap header-in">
-    <a class="logo" href="#home" aria-label="MKN Real Estate Point, home">
+    <a class="logo" href="#home" aria-label="MKN Real Estate Properties, home">
       <span class="logo-mark has-fb" data-label="MKN"><img src="assets/mkn-logo.png" alt="" width="46" height="46" onerror="mknImgFail(this)"></span>
-      <span class="logo-text"><strong>MKN Real Estate Point</strong><span>One team • Multiple property solutions</span></span>
+      <span class="logo-text"><strong>MKN Real Estate Properties</strong><span>One team • Multiple property solutions</span></span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Main navigation">
       <a class="link" href="#about">About</a>
       <a class="link" href="#services">Services</a>
-      <a class="link" href="#project">Speed Sanarelli</a>
+      <a class="link" href="#projects">Projects</a>
       <a class="link" href="#interiors">Interiors</a>
       <a class="link" href="#process">Process</a>
       <a class="link" href="#why">Why Us</a>
@@ -370,7 +419,7 @@ footer a:hover{color:#fff;text-decoration:underline}
   </div>
   <div class="wrap">
     <div class="hero-in">
-      <span class="eyebrow">MKN Real Estate Point</span>
+      <span class="eyebrow">MKN Real Estate Properties</span>
       <h1 id="hero-title">From planning to property, we <em>help you move forward.</em></h1>
       <p class="sub">One team • Multiple property solutions. Residential projects, interiors, home loan assistance and site support, with one team to talk to.</p>
       <div class="hero-actions">
@@ -387,18 +436,19 @@ footer a:hover{color:#fff;text-decoration:underline}
   <div class="wrap about-grid">
     <div class="reveal">
       <span class="eyebrow">About us</span>
-      <h2 id="about-title">About MKN Real Estate Point</h2>
-      <p class="lead">MKN Real Estate Point is a property solutions team that helps you through every stage of a property decision, from the first idea to the finished home.</p>
+      <h2 id="about-title">About MKN Real Estate Properties</h2>
+      <p class="lead">MKN Real Estate Properties is a property solutions team that helps you through every stage of a property decision, from the first idea to the finished home.</p>
       <p>Buying a flat, finishing an interior, arranging a home loan or planning a small building can mean dealing with many different people. We bring these steps together so you have one team to talk to, clear information at each stage, and support until the work is done.</p>
       <ul class="checks">
         <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>One point of contact across projects, interiors, finance and site support</span></li>
         <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Straightforward guidance based on your requirement and budget</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Serving Hyderabad and nearby areas</span></li>
         <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Reach us directly on WhatsApp or email, with no middlemen</span></li>
       </ul>
     </div>
     <div class="about-card reveal">
       <blockquote>“From planning to property, we help you move forward.”</blockquote>
-      <cite>MKN Real Estate Point</cite>
+      <cite>MKN Real Estate Properties</cite>
     </div>
   </div>
 </section>
@@ -412,71 +462,207 @@ footer a:hover{color:#fff;text-decoration:underline}
       <p class="lead">Multiple property solutions, one team. Choose a single service or let us coordinate the whole journey.</p>
     </div>
     <div class="cards">
-      <article class="card reveal">
+      <article class="card svc reveal">
+        <div class="svc-img has-fb" data-label=""><img src="https://images.unsplash.com/photo-1760235674447-fe0cc115b697?auto=format&fit=crop&q=75&w=800" alt="Modern apartment building with balconies" width="800" height="500" loading="lazy" decoding="async" onerror="mknImgFail(this)"></div>
+        <div class="svc-body">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg></div>
         <h3>Residential project sales</h3>
         <p>Flats and residential projects presented clearly, with help comparing options and arranging enquiries and site visits.</p>
         <a class="more" href="#enquire" data-req="Residential project sales">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
       </article>
-      <article class="card reveal">
+      <article class="card svc reveal">
+        <div class="svc-img has-fb" data-label=""><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=75&w=800" alt="Elegant living room interior" width="800" height="500" loading="lazy" decoding="async" onerror="mknImgFail(this)"></div>
+        <div class="svc-body">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-interior"/></svg></div>
         <h3>Interior design and execution</h3>
         <p>From design ideas to on-site execution, we help you plan and complete interiors that suit how you live.</p>
         <a class="more" href="#enquire" data-req="Interior design and execution">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
       </article>
-      <article class="card reveal">
+      <article class="card svc reveal">
+        <div class="svc-img has-fb" data-label=""><img src="https://images.unsplash.com/photo-1724482606633-fa74fe4f5de1?auto=format&fit=crop&q=75&w=800" alt="Hand holding a house key over small house models" width="800" height="500" loading="lazy" decoding="async" onerror="mknImgFail(this)"></div>
+        <div class="svc-body">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-bank"/></svg></div>
         <h3>Home loan assistance</h3>
         <p>Guidance on the home loan process, from understanding your options to preparing for your application.</p>
         <a class="more" href="#enquire" data-req="Home loan assistance">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
       </article>
-      <article class="card reveal">
+      <article class="card svc reveal">
+        <div class="svc-img has-fb" data-label=""><img src="https://images.unsplash.com/photo-1781888688940-5730c3fd5baf?auto=format&fit=crop&q=75&w=800" alt="Architectural blueprints on a desk" width="800" height="500" loading="lazy" decoding="async" onerror="mknImgFail(this)"></div>
+        <div class="svc-body">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-draft"/></svg></div>
         <h3>Architecture and design coordination</h3>
         <p>We help connect your plans with architects and designers and keep the requirements aligned from drawing to site.</p>
         <a class="more" href="#enquire" data-req="Architecture and design coordination">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
       </article>
-      <article class="card reveal">
+      <article class="card svc reveal">
+        <div class="svc-img has-fb" data-label=""><img src="https://images.unsplash.com/photo-1644221150167-fb4fafa7f411?auto=format&fit=crop&q=75&w=800" alt="Building under construction with a crane" width="800" height="500" loading="lazy" decoding="async" onerror="mknImgFail(this)"></div>
+        <div class="svc-body">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-site"/></svg></div>
         <h3>Pre-construction and site support</h3>
         <p>Support in the planning stage and on site, so decisions are made with clarity before and during construction.</p>
         <a class="more" href="#enquire" data-req="Pre-construction and site support">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
       </article>
-      <article class="card reveal">
+      <article class="card svc reveal">
+        <div class="svc-img has-fb" data-label=""><img src="https://images.unsplash.com/photo-1721815693498-cc28507c0ba2?auto=format&fit=crop&q=75&w=800" alt="Two-storey modern house" width="800" height="500" loading="lazy" decoding="async" onerror="mknImgFail(this)"></div>
+        <div class="svc-body">
         <div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></div>
         <h3>Small-scale building solutions</h3>
         <p>Practical help for smaller building needs, with planning and coordination handled by one team.</p>
         <a class="more" href="#enquire" data-req="Small-scale building solutions">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
       </article>
     </div>
   </div>
 </section>
 
 <!-- 5. FEATURED PROJECT -->
-<section id="project" class="dark" aria-labelledby="project-title">
+<section id="projects" class="dark" aria-labelledby="projects-title">
   <div class="wrap">
-    <div class="project-grid">
-      <div class="reveal">
-        <span class="eyebrow">Featured project</span>
-        <h2 id="project-title">Speed Sanarelli</h2>
-        <p class="lead">Flats for sale at Speed Sanarelli.</p>
-        <p>Speed Sanarelli is a residential project we are presenting through MKN Real Estate Point. Browse the project brochure below, then get in touch to ask about availability, pricing, floor plans and site visits. We will share the details directly and answer your questions.</p>
-        <div class="project-actions">
-          <a class="btn btn-gold" href="#enquire" data-req="Speed Sanarelli flats" data-msg="I would like to enquire about flats at Speed Sanarelli.">Enquire about Speed Sanarelli <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-ghost" data-wa data-wa-text="Hello MKN Real Estate Point, I would like to enquire about flats at Speed Sanarelli." href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    <div class="section-head reveal">
+      <span class="eyebrow">Projects</span>
+      <h2 id="projects-title">Featured projects</h2>
+      <p class="lead">Residential projects in Hyderabad and nearby. Tell us what you need and we will help you shortlist and arrange a visit.</p>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Filter projects">
+      <button class="filter" type="button" data-f="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-f="Apartments" aria-pressed="false">Apartments</button>
+      <button class="filter" type="button" data-f="Villas" aria-pressed="false">Villas</button>
+    </div>
+    <!-- SAMPLE LISTINGS: names, locations, sizes and amenities below are illustrative. Edit each card to your real project details before promoting the site. -->
+    <div class="projects" id="projectGrid">
+      <article class="proj reveal" data-type="Apartments">
+        <div class="proj-img has-fb" data-label="">
+          <span class="pstatus ">New launch</span>
+          <img src="assets/speed-sanarelli-cover.jpg" alt="Speed Sanarelli, flats for sale in Hyderabad" width="800" height="600" loading="lazy" decoding="async" onerror="mknImgFail(this)">
         </div>
-      </div>
-      <div class="cover has-fb reveal" data-label="Speed Sanarelli">
-        <span class="badge">Flats for sale</span>
-        <img src="assets/speed-sanarelli-cover.jpg" alt="Speed Sanarelli residential project" width="1200" height="900" loading="lazy" decoding="async" onerror="mknImgFail(this)">
-      </div>
+        <div class="proj-body">
+          <h3>Speed Sanarelli</h3>
+          <p class="loc"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Hyderabad</p>
+          <dl class="specs">
+            <div><dt>Type</dt><dd>Flats for sale</dd></div>
+            <div><dt>Configuration</dt><dd>2 &amp; 3 BHK flats</dd></div>
+            <div><dt>Size</dt><dd>1,050 – 1,650 sq ft</dd></div>
+            <div><dt>Price</dt><dd>On request</dd></div>
+          </dl>
+          <ul class="chips" aria-label="Amenities"><li>Clubhouse</li><li>Gym</li><li>Covered parking</li><li>24×7 security</li></ul>
+          <div class="proj-actions">
+            <a class="btn btn-gold" href="#enquire" data-req="Residential project sales" data-msg="I would like to enquire about Speed Sanarelli.">Enquire</a>
+            <a class="btn btn-ghost" data-wa data-wa-text="Hello MKN Real Estate Properties, I would like to know more about Speed Sanarelli." href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj reveal" data-type="Apartments">
+        <div class="proj-img has-fb" data-label="">
+          <span class="pstatus ">Under construction</span>
+          <img src="https://images.unsplash.com/photo-1758448511648-d7d8e1993c3f?auto=format&fit=crop&q=75&w=800" alt="Skyline Heights, apartments in Gachibowli, Hyderabad" width="800" height="600" loading="lazy" decoding="async" onerror="mknImgFail(this)">
+        </div>
+        <div class="proj-body">
+          <h3>Skyline Heights</h3>
+          <p class="loc"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Gachibowli, Hyderabad</p>
+          <dl class="specs">
+            <div><dt>Type</dt><dd>Apartments</dd></div>
+            <div><dt>Configuration</dt><dd>3 BHK flats</dd></div>
+            <div><dt>Size</dt><dd>1,500 – 2,100 sq ft</dd></div>
+            <div><dt>Price</dt><dd>On request</dd></div>
+          </dl>
+          <ul class="chips" aria-label="Amenities"><li>Swimming pool</li><li>Gym</li><li>Lift</li><li>Power backup</li></ul>
+          <div class="proj-actions">
+            <a class="btn btn-gold" href="#enquire" data-req="Residential project sales" data-msg="I would like to enquire about Skyline Heights.">Enquire</a>
+            <a class="btn btn-ghost" data-wa data-wa-text="Hello MKN Real Estate Properties, I would like to know more about Skyline Heights." href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj reveal" data-type="Apartments">
+        <div class="proj-img has-fb" data-label="">
+          <span class="pstatus ready">Ready to move</span>
+          <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&q=75&w=800" alt="Green Meadows Residency, gated community in Miyapur, Hyderabad" width="800" height="600" loading="lazy" decoding="async" onerror="mknImgFail(this)">
+        </div>
+        <div class="proj-body">
+          <h3>Green Meadows Residency</h3>
+          <p class="loc"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Miyapur, Hyderabad</p>
+          <dl class="specs">
+            <div><dt>Type</dt><dd>Gated community</dd></div>
+            <div><dt>Configuration</dt><dd>2 BHK flats</dd></div>
+            <div><dt>Size</dt><dd>950 – 1,250 sq ft</dd></div>
+            <div><dt>Price</dt><dd>On request</dd></div>
+          </dl>
+          <ul class="chips" aria-label="Amenities"><li>Play area</li><li>Landscaped garden</li><li>Parking</li><li>Security</li></ul>
+          <div class="proj-actions">
+            <a class="btn btn-gold" href="#enquire" data-req="Residential project sales" data-msg="I would like to enquire about Green Meadows Residency.">Enquire</a>
+            <a class="btn btn-ghost" data-wa data-wa-text="Hello MKN Real Estate Properties, I would like to know more about Green Meadows Residency." href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj reveal" data-type="Villas">
+        <div class="proj-img has-fb" data-label="">
+          <span class="pstatus ">New launch</span>
+          <img src="https://images.unsplash.com/photo-1783125127199-860da9744dcc?auto=format&fit=crop&q=75&w=800" alt="Lakeview Villas, independent villas in Kompally, Hyderabad" width="800" height="600" loading="lazy" decoding="async" onerror="mknImgFail(this)">
+        </div>
+        <div class="proj-body">
+          <h3>Lakeview Villas</h3>
+          <p class="loc"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Kompally, Hyderabad</p>
+          <dl class="specs">
+            <div><dt>Type</dt><dd>Independent villas</dd></div>
+            <div><dt>Configuration</dt><dd>3 &amp; 4 BHK villas</dd></div>
+            <div><dt>Size</dt><dd>2,400 – 3,600 sq ft</dd></div>
+            <div><dt>Price</dt><dd>On request</dd></div>
+          </dl>
+          <ul class="chips" aria-label="Amenities"><li>Gated community</li><li>Clubhouse</li><li>Park</li><li>Jogging track</li></ul>
+          <div class="proj-actions">
+            <a class="btn btn-gold" href="#enquire" data-req="Residential project sales" data-msg="I would like to enquire about Lakeview Villas.">Enquire</a>
+            <a class="btn btn-ghost" data-wa data-wa-text="Hello MKN Real Estate Properties, I would like to know more about Lakeview Villas." href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj reveal" data-type="Apartments">
+        <div class="proj-img has-fb" data-label="">
+          <span class="pstatus ">Under construction</span>
+          <img src="https://images.unsplash.com/photo-1760235674447-fe0cc115b697?auto=format&fit=crop&q=75&w=800" alt="Urban Nest, apartments in Kondapur, Hyderabad" width="800" height="600" loading="lazy" decoding="async" onerror="mknImgFail(this)">
+        </div>
+        <div class="proj-body">
+          <h3>Urban Nest</h3>
+          <p class="loc"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Kondapur, Hyderabad</p>
+          <dl class="specs">
+            <div><dt>Type</dt><dd>Apartments</dd></div>
+            <div><dt>Configuration</dt><dd>2 &amp; 3 BHK flats</dd></div>
+            <div><dt>Size</dt><dd>1,100 – 1,700 sq ft</dd></div>
+            <div><dt>Price</dt><dd>On request</dd></div>
+          </dl>
+          <ul class="chips" aria-label="Amenities"><li>Co-working lounge</li><li>Gym</li><li>EV charging</li><li>Terrace garden</li></ul>
+          <div class="proj-actions">
+            <a class="btn btn-gold" href="#enquire" data-req="Residential project sales" data-msg="I would like to enquire about Urban Nest.">Enquire</a>
+            <a class="btn btn-ghost" data-wa data-wa-text="Hello MKN Real Estate Properties, I would like to know more about Urban Nest." href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </article>
+      <article class="proj reveal" data-type="Villas">
+        <div class="proj-img has-fb" data-label="">
+          <span class="pstatus ready">Ready to move</span>
+          <img src="https://images.unsplash.com/photo-1758448756207-54505680d130?auto=format&fit=crop&q=75&w=800" alt="Palm Grove Homes, premium villas in Shamirpet, Hyderabad" width="800" height="600" loading="lazy" decoding="async" onerror="mknImgFail(this)">
+        </div>
+        <div class="proj-body">
+          <h3>Palm Grove Homes</h3>
+          <p class="loc"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Shamirpet, Hyderabad</p>
+          <dl class="specs">
+            <div><dt>Type</dt><dd>Premium villas</dd></div>
+            <div><dt>Configuration</dt><dd>4 BHK villas</dd></div>
+            <div><dt>Size</dt><dd>3,000 – 4,200 sq ft</dd></div>
+            <div><dt>Price</dt><dd>On request</dd></div>
+          </dl>
+          <ul class="chips" aria-label="Amenities"><li>Private garden</li><li>Jogging track</li><li>Security</li><li>Clubhouse</li></ul>
+          <div class="proj-actions">
+            <a class="btn btn-gold" href="#enquire" data-req="Residential project sales" data-msg="I would like to enquire about Palm Grove Homes.">Enquire</a>
+            <a class="btn btn-ghost" data-wa data-wa-text="Hello MKN Real Estate Properties, I would like to know more about Palm Grove Homes." href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+          </div>
+        </div>
+      </article>
     </div>
-
-    <div class="gallery-head reveal">
-      <h3>Project brochure</h3>
-      <p>Eight pages. Tap any page to view it larger.</p>
-    </div>
-    <div class="gallery" id="gallery"><!-- thumbnails inserted by script below; static fallback list is also valid --></div>
+    <p class="proj-note">Project details are indicative and may change. Please contact us for current availability, pricing and RERA details.</p>
   </div>
 </section>
 
@@ -490,19 +676,19 @@ footer a:hover{color:#fff;text-decoration:underline}
     </div>
     <div class="videos">
       <article class="vcard reveal">
-        <div class="vframe" data-label="Interior video 01">
+        <div class="vframe" data-label="Interior showcase 01">
           <video controls preload="none" playsinline poster="assets/interior-01-poster.jpg" aria-label="Interior showcase video 1"><source src="assets/interior-01.mp4" type="video/mp4">Your browser does not support HTML video.</video>
         </div>
         <div class="cap"><h3>Interior showcase 01</h3><p>Interior design and execution</p></div>
       </article>
       <article class="vcard reveal">
-        <div class="vframe" data-label="Interior video 02">
+        <div class="vframe" data-label="Interior showcase 02">
           <video controls preload="none" playsinline poster="assets/interior-02-poster.jpg" aria-label="Interior showcase video 2"><source src="assets/interior-02.mp4" type="video/mp4">Your browser does not support HTML video.</video>
         </div>
         <div class="cap"><h3>Interior showcase 02</h3><p>Interior design and execution</p></div>
       </article>
       <article class="vcard reveal">
-        <div class="vframe" data-label="Interior video 03">
+        <div class="vframe" data-label="Interior showcase 03">
           <video controls preload="none" playsinline poster="assets/interior-03-poster.jpg" aria-label="Interior showcase video 3"><source src="assets/interior-03.mp4" type="video/mp4">Your browser does not support HTML video.</video>
         </div>
         <div class="cap"><h3>Interior showcase 03</h3><p>Interior design and execution</p></div>
@@ -561,6 +747,19 @@ footer a:hover{color:#fff;text-decoration:underline}
   </div>
 </section>
 
+<!-- CTA BAND -->
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="wrap reveal">
+    <span class="eyebrow" style="color:var(--gold-300)">Hyderabad &amp; nearby</span>
+    <h2 id="cta-title">Ready to find your next home?</h2>
+    <p>Tell us what you are looking for and our team will guide you from planning to property.</p>
+    <div class="actions">
+      <a class="btn btn-wa" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Chat on WhatsApp</a>
+      <a class="btn btn-gold" href="#enquire">Send an enquiry <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
 <!-- 9 & 10. ENQUIRY + CONTACT -->
 <section id="enquire" aria-labelledby="enq-title">
   <div class="wrap enq-grid">
@@ -570,8 +769,14 @@ footer a:hover{color:#fff;text-decoration:underline}
       <p class="lead">Tell us what you are looking for and we will get back to you. Prefer to talk now? Message us directly.</p>
       <ul class="contact-list">
         <li><a data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></span><span><small>WhatsApp</small><strong>+91 8466098440</strong></span></a></li>
-        <li><a data-mail href="mailto:Krishnanaikm8@gmail.com"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small><strong>Krishnanaikm8@gmail.com</strong></span></a></li>
+        <li><a data-mail href="mailto:MKNrealestateproperties@gmail.com"><span class="ico"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email</small><strong>MKNrealestateproperties@gmail.com</strong></span></a></li>
       </ul>
+        <div class="social">
+          <a class="wa" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></a>
+          <a class="ig" href="https://www.instagram.com/mknrealestateproperties" target="_blank" rel="noopener" aria-label="MKN Real Estate Properties on Instagram"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a class="fb" href="https://www.facebook.com/profile.php?id=61596001301210" target="_blank" rel="noopener" aria-label="MKN Real Estate Properties on Facebook"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a class="yt" href="https://youtube.com/@mknrealestateproperties" target="_blank" rel="noopener" aria-label="MKN Real Estate Properties on YouTube"><svg class="icon" aria-hidden="true"><use href="#i-yt"/></svg></a>
+        </div>
     </div>
 
     <form class="enq reveal" id="enqForm" novalidate>
@@ -592,7 +797,6 @@ footer a:hover{color:#fff;text-decoration:underline}
           <label for="f-req">Requirement <span class="req" aria-hidden="true">*</span></label>
           <select id="f-req" name="requirement" required aria-describedby="e-req">
             <option value="">Select a requirement</option>
-            <option>Speed Sanarelli flats</option>
             <option>Residential project sales</option>
             <option>Interior design and execution</option>
             <option>Home loan assistance</option>
@@ -634,15 +838,16 @@ footer a:hover{color:#fff;text-decoration:underline}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <p class="logo-text" style="color:#fff;margin-bottom:.8rem"><strong style="font-size:1.4rem">MKN Real Estate Point</strong><span>One team • Multiple property solutions</span></p>
+        <p class="logo-text" style="color:#fff;margin-bottom:.8rem"><strong style="font-size:1.4rem">MKN Real Estate Properties</strong><span>One team • Multiple property solutions</span></p>
         <p>From planning to property, we help you move forward.</p>
+        <p>Serving Hyderabad &amp; nearby.</p>
       </div>
       <div>
         <h4>Explore</h4>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#project">Speed Sanarelli</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#interiors">Interiors</a></li>
           <li><a href="#process">Process</a></li>
         </ul>
@@ -651,31 +856,27 @@ footer a:hover{color:#fff;text-decoration:underline}
         <h4>Contact</h4>
         <ul>
           <li><a data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener">WhatsApp: +91 8466098440</a></li>
-          <li><a data-mail href="mailto:Krishnanaikm8@gmail.com">Krishnanaikm8@gmail.com</a></li>
+          <li><a data-mail href="mailto:MKNrealestateproperties@gmail.com">MKNrealestateproperties@gmail.com</a></li>
           <li><a href="#enquire">Send an enquiry</a></li>
         </ul>
+        <div class="social">
+          <a class="wa" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></a>
+          <a class="ig" href="https://www.instagram.com/mknrealestateproperties" target="_blank" rel="noopener" aria-label="MKN Real Estate Properties on Instagram"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg></a>
+          <a class="fb" href="https://www.facebook.com/profile.php?id=61596001301210" target="_blank" rel="noopener" aria-label="MKN Real Estate Properties on Facebook"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg></a>
+          <a class="yt" href="https://youtube.com/@mknrealestateproperties" target="_blank" rel="noopener" aria-label="MKN Real Estate Properties on YouTube"><svg class="icon" aria-hidden="true"><use href="#i-yt"/></svg></a>
+        </div>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="year">2026</span> MKN Real Estate Point. All rights reserved.</span>
+      <span>© <span id="year">2026</span> MKN Real Estate Properties. All rights reserved. Photos: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</span>
       <a href="#top">Back to top ↑</a>
     </div>
   </div>
 </footer>
 
-<a class="fab" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener" aria-label="Chat with MKN Real Estate Point on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></a>
+<a class="fab" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener" aria-label="Chat with MKN Real Estate Properties on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg><span>Chat with us</span></a>
 
-<!-- Brochure lightbox -->
-<dialog class="lightbox" id="lightbox" aria-label="Brochure page viewer">
-  <div class="lb-in">
-    <div class="lb-bar"><span id="lbCount"></span><button class="lb-btn" id="lbClose" aria-label="Close viewer" type="button">✕</button></div>
-    <div class="lb-stage">
-      <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous page" type="button">‹</button>
-      <img id="lbImg" alt="">
-      <button class="lb-btn lb-next" id="lbNext" aria-label="Next page" type="button">›</button>
-    </div>
-  </div>
-</dialog>
+
 
 <script>
 (function () {
@@ -687,24 +888,52 @@ footer a:hover{color:#fff;text-decoration:underline}
      Until this is filled in, the form will NOT claim to have sent anything.
      See README.md for the deployment steps.
      ========================================================================== */
-  var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzBG5vDXlQe88d7nSqlrTknMrSdDD1xgFatlUp7OGA5clbzjYUbpXuJS_OHbOsBmWIhpg/exec';
+  var FORM_ENDPOINT = '';
 
   var WA_NUMBER = '918466098440';
-  var EMAIL = 'Krishnanaikm8@gmail.com';
+  var EMAIL = 'MKNrealestateproperties@gmail.com';
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ---- Real photos from Unsplash (free licence, direct linking allowed) ----
+     Each local asset path maps to a photo. If the photo fails to load, the local
+     file in /assets is used instead. When you upload your OWN photo to /assets,
+     delete that line from this list so your file is shown instead. */
+  var U = 'https://images.unsplash.com/';
+  var Q = '?auto=format&fit=crop&q=75&w=';
+  var REMOTE = {
+    'assets/hero-property.jpg':          U + 'photo-1758448511648-d7d8e1993c3f' + Q + '1920',  // Aalo Lens
+    'assets/speed-sanarelli-cover.jpg':  U + 'photo-1758903847147-cd0d56f318e0' + Q + '1200',  // Liana S
+    'assets/interior-01-poster.jpg':     U + 'photo-1598928506311-c55ded91a20c' + Q + '1280',
+    'assets/interior-02-poster.jpg':     U + 'photo-1757418254008-1647eb0afe04' + Q + '1280',  // Clay Banks
+    'assets/interior-03-poster.jpg':     U + 'photo-1687180498602-5a1046defaa4' + Q + '1280'
+  };
+  function useRemote(localPath, apply) {
+    var url = REMOTE[localPath];
+    if (!url) return;
+    var probe = new Image();
+    probe.onload = function () { apply(url); };   // on error: keep the local file
+    probe.src = url;
+  }
+  $$('img').forEach(function (img) {
+    var p = img.getAttribute('src');
+    useRemote(p, function (u) { img.src = u; img.style.display = ''; if (img.parentElement) img.parentElement.classList.remove('is-fallback'); });
+  });
+  $$('video[poster]').forEach(function (v) {
+    useRemote(v.getAttribute('poster'), function (u) { v.poster = u; });
+  });
 
   /* ---- Year ---- */
   $('#year').textContent = new Date().getFullYear();
 
   /* ---- WhatsApp / mailto helpers (consistent numbers everywhere) ---- */
   $$('[data-wa]').forEach(function (a) {
-    var text = a.getAttribute('data-wa-text') || 'Hello MKN Real Estate Point, I would like to know more about your property services.';
+    var text = a.getAttribute('data-wa-text') || 'Hello MKN Real Estate Properties, I would like to know more about your property services.';
     a.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text);
   });
   $$('[data-mail]').forEach(function (a) {
-    a.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Enquiry: MKN Real Estate Point');
+    a.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Enquiry: MKN Real Estate Properties');
   });
 
   /* ---- Header: scrolled state + mobile menu ---- */
@@ -757,56 +986,20 @@ footer a:hover{color:#fff;text-decoration:underline}
   /* ---- Videos: graceful fallback if the file is missing ---- */
   $$('.vframe video').forEach(function (v) {
     var frame = v.parentElement;
-    var fail = function () { frame.classList.add('is-fallback'); frame.setAttribute('data-label', frame.getAttribute('data-label') + ' (coming soon)'); };
+    var fail = function () { frame.classList.add('is-fallback');  };
     var src = v.querySelector('source');
     if (src) src.addEventListener('error', fail);
     v.addEventListener('error', fail);
   });
 
-  /* ---- Brochure gallery + lightbox ---- */
-  var pages = [];
-  for (var i = 1; i <= 8; i++) pages.push('assets/sanarelli-page-0' + i + '.jpg');
-  var gallery = $('#gallery');
-  pages.forEach(function (src, idx) {
-    var n = idx + 1;
-    var b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'thumb has-fb';
-    b.setAttribute('data-label', 'Brochure page ' + n);
-    b.setAttribute('aria-label', 'Open Speed Sanarelli brochure page ' + n + ' of 8');
-    b.innerHTML = '<img src="' + src + '" alt="Speed Sanarelli brochure page ' + n + '" width="600" height="800" loading="lazy" decoding="async" onerror="mknImgFail(this)"><span class="num">' + (n < 10 ? '0' + n : n) + '</span>';
-    b.addEventListener('click', function () { openLb(idx, b); });
-    gallery.appendChild(b);
-  });
-
-  var lb = $('#lightbox'), lbImg = $('#lbImg'), lbCount = $('#lbCount');
-  var cur = 0, opener = null;
-  function showLb(i) {
-    cur = (i + pages.length) % pages.length;
-    lbImg.style.display = '';
-    lbImg.onerror = function () { lbImg.style.display = 'none'; lbCount.textContent = 'Brochure page ' + (cur + 1) + ' of ' + pages.length + ' (image not available yet)'; };
-    lbImg.src = pages[cur];
-    lbImg.alt = 'Speed Sanarelli brochure page ' + (cur + 1);
-    lbCount.textContent = 'Page ' + (cur + 1) + ' of ' + pages.length;
-  }
-  function openLb(i, from) {
-    opener = from;
-    showLb(i);
-    if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
-    document.body.style.overflow = 'hidden';
-    $('#lbClose').focus();
-  }
-  function closeLb() {
-    if (typeof lb.close === 'function') lb.close(); else lb.removeAttribute('open');
-  }
-  lb.addEventListener('close', function () { document.body.style.overflow = ''; if (opener) opener.focus(); });
-  $('#lbClose').addEventListener('click', closeLb);
-  $('#lbPrev').addEventListener('click', function () { showLb(cur - 1); });
-  $('#lbNext').addEventListener('click', function () { showLb(cur + 1); });
-  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
-  lb.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') showLb(cur - 1);
-    if (e.key === 'ArrowRight') showLb(cur + 1);
+  /* ---- Project filter ---- */
+  var fbtns = $$('.filter'), cards = $$('#projectGrid .proj');
+  fbtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.getAttribute('data-f');
+      fbtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      cards.forEach(function (c) { c.hidden = !(f === 'all' || c.getAttribute('data-type') === f); });
+    });
   });
 
   /* ---- Pre-fill requirement from service / project buttons ---- */
