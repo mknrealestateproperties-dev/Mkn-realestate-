@@ -627,7 +627,19 @@ footer .logo-text span{color:var(--gold-700)}
   .hero-tag{display:block;font-size:.62rem;letter-spacing:.1em;padding:10px 0}
   .hero-tag .wrap{justify-content:space-between;gap:.4rem .8rem;padding-right:70px}
   .hero{padding-bottom:84px}
-}</style>
+}
+
+/* ===== Desktop/laptop header: keep full menu, hide hamburger above 900px ===== */
+@media (min-width:901px) and (max-width:1180px){
+  .logo-text span{display:none}
+  .nav{gap:1rem}
+  .nav a.link{font-size:.88rem}
+  .header-cta .btn{padding:.7rem 1rem;font-size:.85rem}
+}
+.menu-btn{border-color:rgba(11,31,58,.45);background:#fff}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{background:var(--navy-800)}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+</style>
 </head>
 
 <body>
