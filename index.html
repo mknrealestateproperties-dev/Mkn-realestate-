@@ -595,6 +595,23 @@ footer .logo-text span{color:var(--gold-700)}
 @media (max-width:640px){.cta-band{background-attachment:scroll}}
 .svc-img,.proj-img{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='xMidYMax slice'%3E%3Cg fill='%23ffffff' fill-opacity='.1'%3E%3Crect x='40' y='120' width='90' height='180'/%3E%3Crect x='150' y='60' width='110' height='240'/%3E%3Crect x='280' y='150' width='80' height='150'/%3E%3Crect x='390' y='40' width='130' height='260'/%3E%3Crect x='540' y='110' width='100' height='190'/%3E%3Crect x='660' y='80' width='120' height='220'/%3E%3Crect x='800' y='140' width='90' height='160'/%3E%3Crect x='910' y='30' width='140' height='270'/%3E%3Crect x='1070' y='100' width='100' height='200'/%3E%3C/g%3E%3C/svg%3E") bottom/100% auto no-repeat,linear-gradient(135deg,#13305A,#0B1F3A)}
 .svc-img.has-fb.is-fallback,.proj-img.has-fb.is-fallback{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='xMidYMax slice'%3E%3Cg fill='%23ffffff' fill-opacity='.1'%3E%3Crect x='40' y='120' width='90' height='180'/%3E%3Crect x='150' y='60' width='110' height='240'/%3E%3Crect x='280' y='150' width='80' height='150'/%3E%3Crect x='390' y='40' width='130' height='260'/%3E%3Crect x='540' y='110' width='100' height='190'/%3E%3Crect x='660' y='80' width='120' height='220'/%3E%3Crect x='800' y='140' width='90' height='160'/%3E%3Crect x='910' y='30' width='140' height='270'/%3E%3Crect x='1070' y='100' width='100' height='200'/%3E%3C/g%3E%3C/svg%3E") bottom/100% auto no-repeat,linear-gradient(135deg,#13305A,#0B1F3A)}
+
+/* Hero: light tint + readable text (keep this LAST in <style>) */
+.hero-media::after{
+  background:linear-gradient(90deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.72) 40%,rgba(255,255,255,.28) 72%,rgba(255,255,255,0) 100%);
+}
+@media (max-width:900px){
+  .hero-media::after{background:linear-gradient(180deg,rgba(255,255,255,.80),rgba(255,255,255,.70))}
+}
+.hero{color:var(--navy-800)}
+.hero .eyebrow{color:var(--gold-700)}
+.hero h1{color:var(--navy-800);text-shadow:0 1px 18px rgba(255,255,255,.7)}
+.hero h1 em{color:var(--gold-700)}
+.hero p.sub{color:#26354F;font-weight:500;text-shadow:0 1px 12px rgba(255,255,255,.8)}
+.hero .btn-ghost{border-color:var(--navy-800);color:var(--navy-800)}
+.hero .btn-ghost:hover{background:var(--navy-800);color:#fff}
+.hero-tag{color:var(--navy-700)}
+.hero-tag .wrap{border-top-color:rgba(11,31,58,.25)}
 </style>
 </head>
 
