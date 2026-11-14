@@ -612,7 +612,22 @@ footer .logo-text span{color:var(--gold-700)}
 .hero .btn-ghost:hover{background:var(--navy-800);color:#fff}
 .hero-tag{color:var(--navy-700)}
 .hero-tag .wrap{border-top-color:rgba(11,31,58,.25)}
-</style>
+
+/* ===== Fix: header stays white + readable after scrolling; hero bottom strip visible ===== */
+.site-header.scrolled,.site-header.open{background:rgba(255,255,255,.97);box-shadow:0 6px 24px -14px rgba(11,31,58,.35)}
+.site-header .logo,.site-header .logo-text strong{color:var(--navy-800)}
+.site-header .nav a.link{color:var(--navy-800)}
+.hero-tag{bottom:0;color:var(--navy-800);background:rgba(255,255,255,.92);border-top:1px solid var(--line);padding:14px 0;font-weight:600}
+.hero-tag .wrap{border-top:0;padding-top:0}
+@media (max-width:1100px){
+  .site-header .nav{background:#fff}
+  .site-header .nav a.link{color:var(--navy-800);border-bottom:1px solid var(--line)}
+}
+@media (max-width:640px){
+  .hero-tag{display:block;font-size:.62rem;letter-spacing:.1em;padding:10px 0}
+  .hero-tag .wrap{justify-content:space-between;gap:.4rem .8rem;padding-right:70px}
+  .hero{padding-bottom:84px}
+}</style>
 </head>
 
 <body>
