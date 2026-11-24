@@ -329,7 +329,7 @@ window.mknLogoFail = function (img) {
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (d && d.ok && d.cpId) {
-          showCard({ name: d.name || payload.name, phone: d.phone || payload.phone, cpId: d.cpId, joinedOn: d.joinedOn, rera: d.rera || '' }, false);
+          showCard({ name: d.name || payload.name, phone: d.phone || payload.phone, cpId: d.cpId, joinedOn: d.joinedOn, rera: d.rera || '' }, false, !!d.alreadyRegistered);
           form.reset();
         } else if (d && d.fieldErrors) {
           var fe = d.fieldErrors;
@@ -355,7 +355,7 @@ window.mknLogoFail = function (img) {
   });
 
   /* ---------- card ---------- */
-  function showCard(d, preview) {
+  function showCard(d, preview, already) {
     cardData = d; isPreview = !!preview;
     $('pcName').textContent = d.name;
     $('pcId').textContent = d.cpId;
@@ -364,13 +364,17 @@ window.mknLogoFail = function (img) {
     if (d.rera) { $('pcRera').textContent = d.rera; $('pcReraBox').hidden = false; } else { $('pcReraBox').hidden = true; }
     $('pcRibbon').hidden = !preview;
     $('previewNote').hidden = !preview;
-    $('doneTitle').textContent = 'Welcome aboard, ' + d.name.split(' ')[0] + '!';
+    $('doneTitle').textContent = already ? 'You are already registered, ' + d.name.split(' ')[0] + '!' : 'Welcome aboard, ' + d.name.split(' ')[0] + '!';
+    $('doneSub').textContent = already
+      ? 'This phone number is already in our records, so no new CP ID was created. Here is your existing card. We have noted your request and our team will be in touch.'
+      : 'Your registration has been received. Here is your channel partner card. Please download and keep it safe.';
+    $('pcRibbon').textContent = 'PREVIEW';
     $('formSection').style.display = 'none';
     $('intro').style.display = 'none';
     var done = $('done'); done.classList.add('show');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     done.focus({ preventScroll: true });
-    setTimeout(popConfetti, 450);
+    if (!already) setTimeout(popConfetti, 450);
   }
 
   /* ---------- confetti (party poppers from both bottom corners) ---------- */
