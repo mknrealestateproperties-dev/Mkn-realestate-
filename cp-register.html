@@ -128,6 +128,36 @@ footer a{color:var(--navy-800)}
   .top .btn.hide-sm{display:none}
   .brand strong{font-size:1rem}
 }
+
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tab{font:600 .95rem var(--sans);padding:.8rem 1.3rem;min-height:46px;border-radius:999px;border:1.5px solid var(--navy-800);background:#fff;color:var(--navy-800);cursor:pointer;transition:background .2s,color .2s}
+.tab[aria-selected="true"]{background:var(--navy-800);color:#fff}
+.tabs + .panel{margin-top:14px}
+select{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:#fff;border:1.5px solid #CBD3E1;border-radius:12px;padding:.85rem 1rem;min-height:50px}
+select:focus{outline:none;border-color:var(--gold-700);box-shadow:0 0 0 3px rgba(201,169,110,.35)}
+.panel-note{background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem;font-size:.92rem;color:var(--muted);margin:0 0 20px}
+.panel[hidden]{display:none}
+/* lead receipt */
+#leadDone{display:none;padding:clamp(28px,5vw,56px) 0 72px;text-align:center}
+#leadDone.show{display:block}
+#leadDone h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:.3rem}
+#leadDone p.sub{color:var(--muted);margin:0 auto 26px;max-width:52ch}
+.rcard{position:relative;width:min(560px,100%);margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;text-align:left;box-shadow:0 30px 60px -34px rgba(7,21,42,.55);animation:cardIn .8s cubic-bezier(.2,.9,.25,1.1) both}
+.rc-head{background:linear-gradient(135deg,var(--navy-900),var(--navy-700));color:#fff;padding:18px 22px;display:flex;align-items:center;gap:14px}
+.rc-head .pc-logo{width:46px;height:46px;border-radius:11px}
+.rc-head strong{display:block;font:600 1.15rem var(--serif);letter-spacing:.02em}
+.rc-head span.t{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-500)}
+.rc-body{padding:22px}
+.rc-id{display:inline-flex;align-items:baseline;gap:.7rem;background:var(--gold-500);color:var(--navy-900);border-radius:99px;padding:.45rem 1.1rem;margin-bottom:16px}
+.rc-id small{font-size:.65rem;letter-spacing:.2em;font-weight:700}
+.rc-id b{font-size:1.25rem;letter-spacing:.03em}
+.rc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.rc-grid small{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-700);font-weight:600}
+.rc-grid span{display:block;font-weight:600;color:var(--navy-800);overflow-wrap:anywhere}
+.rc-dup{margin:16px 0 0;background:#FFF7E6;border:1px solid #F0D9A5;border-radius:10px;padding:.7rem .9rem;font-size:.9rem}
+.rc-new{background:#EAF7EE;border-color:#B7E1C3}
+.rc-foot{border-top:1px dashed var(--line);margin-top:18px;padding-top:12px;font-size:.8rem;color:var(--muted);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media (max-width:640px){.rc-grid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.pcard{animation:none}}
 </style>
 </head>
@@ -150,12 +180,16 @@ footer a{color:var(--navy-800)}
 <main>
   <section class="intro wrap" id="intro">
     <span class="eyebrow">Channel partners</span>
-    <h1>Register as an MKN channel partner</h1>
-    <p class="lead">Fill in the short form below. You will get your <strong>CP ID</strong> and a branded partner card straight away, which you can download. Our team will contact you after your registration.</p>
+    <h1>MKN channel partner desk</h1>
+    <p class="lead">New here? Register and get your <strong>CP ID</strong> and a downloadable partner card straight away. Already a partner? Submit your client leads with your CP ID and get a receipt for every lead.</p>
   </section>
 
   <section class="wrap" id="formSection">
-    <div class="panel">
+    <div class="tabs" role="tablist" aria-label="Choose an action">
+      <button class="tab" role="tab" id="tab-reg" aria-selected="true" aria-controls="panel-reg" type="button">Register as partner</button>
+      <button class="tab" role="tab" id="tab-lead" aria-selected="false" aria-controls="panel-lead" tabindex="-1" type="button">Submit a client lead</button>
+    </div>
+    <div class="panel" id="panel-reg" role="tabpanel" aria-labelledby="tab-reg">
       <form id="cpForm" novalidate autocomplete="on">
         <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
         <div class="row">
@@ -210,6 +244,82 @@ footer a{color:var(--navy-800)}
         <div class="status" id="formStatus" role="status" aria-live="polite"></div>
       </form>
     </div>
+  
+    <div class="panel" id="panel-lead" role="tabpanel" aria-labelledby="tab-lead" hidden>
+      <p class="panel-note">No CP ID needed. Enter your name and phone number, then your client's details. If your number is new to us, we will register you as a channel partner and give you a CP ID.</p>
+      <form id="leadForm" novalidate autocomplete="off">
+        <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="row">
+          <div class="field">
+            <label for="l-pname">Your name</label>
+            <input type="text" id="l-pname" name="partnerName" maxlength="100" autocomplete="name" aria-describedby="e-l-pname">
+            <p class="err" id="e-l-pname" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="l-pphone">Your phone number</label>
+            <input type="tel" id="l-pphone" name="partnerPhone" inputmode="tel" maxlength="20" autocomplete="tel" aria-describedby="e-l-pphone">
+            <p class="err" id="e-l-pphone" role="alert"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="l-name">Client name</label>
+            <input type="text" id="l-name" name="clientName" maxlength="100" aria-describedby="e-l-name">
+            <p class="err" id="e-l-name" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="l-phone">Client phone number</label>
+            <input type="tel" id="l-phone" name="clientPhone" inputmode="tel" maxlength="20" aria-describedby="e-l-phone">
+            <p class="err" id="e-l-phone" role="alert"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="l-req">Client requirement</label>
+            <select id="l-req" name="requirement" aria-describedby="e-l-req">
+              <option value="">Select a requirement</option>
+              <option>Residential project sales</option>
+              <option>Interior design and execution</option>
+              <option>Home loan assistance</option>
+              <option>Architecture and design coordination</option>
+              <option>Pre-construction and site support</option>
+              <option>Small-scale building solutions</option>
+              <option>Other</option>
+            </select>
+            <p class="err" id="e-l-req" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="l-budget">Client budget <span class="opt">(optional)</span></label>
+            <select id="l-budget" name="budget">
+              <option value="">Not sure / to discuss</option>
+              <option>Under ₹25 lakh</option>
+              <option>₹25 lakh – ₹50 lakh</option>
+              <option>₹50 lakh – ₹1 crore</option>
+              <option>Above ₹1 crore</option>
+            </select>
+            <p class="err"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="l-area">Preferred area or project <span class="opt">(optional)</span></label>
+          <input type="text" id="l-area" name="area" maxlength="120" placeholder="e.g. Kondapur, 3 BHK">
+        </div>
+        <div class="field">
+          <label for="l-notes">Notes <span class="opt">(optional)</span></label>
+          <textarea id="l-notes" name="notes" maxlength="500"></textarea>
+        </div>
+        <div class="check">
+          <input type="checkbox" id="l-consent" name="consent" aria-describedby="e-l-consent">
+          <label for="l-consent">My client has agreed to be contacted by MKN Real Estate Properties, and I agree to be contacted about this lead.</label>
+        </div>
+        <p class="err" id="e-l-consent" role="alert"></p>
+        <div class="submit-row">
+          <button class="btn btn-gold" type="submit" id="leadBtn">Submit lead</button>
+          <span class="hint">You will get a lead receipt.</span>
+        </div>
+        <div class="status" id="leadStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
   </section>
 
   <section class="wrap" id="done" aria-live="polite" tabindex="-1">
@@ -241,10 +351,41 @@ footer a{color:var(--navy-800)}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
         Download card (PNG)
       </button>
-      <button class="btn btn-outline" type="button" id="popBtn">🎉 Celebrate again</button>
       <a class="btn btn-wa" data-wa href="https://wa.me/918466098440" target="_blank" rel="noopener">Message us on WhatsApp</a>
     </div>
     <p class="fineprint">This card confirms your registration with MKN Real Estate Properties. Partnership terms and verification are confirmed by our team directly.</p>
+  </section>
+
+  <section class="wrap" id="leadDone" aria-live="polite" tabindex="-1">
+    <span class="preview-note" id="lPreviewNote" hidden>Preview with sample data. Nothing was submitted.</span>
+    <h2 id="leadDoneTitle">Lead submitted</h2>
+    <p class="sub" id="leadDoneSub">Thank you! Here is your receipt. Please keep it for your records.</p>
+    <article class="rcard" id="rcard" aria-label="Lead receipt">
+      <div class="rc-head">
+        <span class="pc-logo"><img src="assets/mkn-logo.png" alt="" onerror="mknLogoFail(this)"></span>
+        <div><strong>MKN Real Estate Properties</strong><span class="t">Lead submission receipt</span></div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-id"><small>LEAD ID</small><b id="rcId"></b></div>
+        <div class="rc-grid">
+          <div><small>Client</small><span id="rcClient"></span></div>
+          <div><small>Requirement</small><span id="rcReq"></span></div>
+          <div><small>Submitted by</small><span id="rcBy"></span></div>
+          <div><small>Submitted on</small><span id="rcWhen"></span></div>
+        </div>
+        <p class="rc-dup" id="rcDup" hidden><strong>This client number is already in our records.</strong> We have noted your submission and our team will review it.</p>
+        <p class="rc-dup rc-new" id="rcNew" hidden>You have also been registered as an MKN channel partner. Your CP ID: <strong id="rcNewId"></strong></p>
+        <div class="rc-foot"><span>mknrealestate.in</span><span>WhatsApp +91 8466098440</span></div>
+      </div>
+    </article>
+    <div class="actions">
+      <button class="btn btn-navy" type="button" id="rcDl">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+        Download receipt (PNG)
+      </button>
+      <button class="btn btn-outline" type="button" id="rcCardBtn" hidden>View my partner card</button>
+      <button class="btn btn-gold" type="button" id="anotherLead">Submit another lead</button>
+    </div>
   </section>
 </main>
 
@@ -329,6 +470,7 @@ window.mknLogoFail = function (img) {
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (d && d.ok && d.cpId) {
+          saveMe(d.name || payload.name, d.phone || payload.phone); prefillMe();
           showCard({ name: d.name || payload.name, phone: d.phone || payload.phone, cpId: d.cpId, joinedOn: d.joinedOn, rera: d.rera || '' }, false, !!d.alreadyRegistered);
           form.reset();
         } else if (d && d.fieldErrors) {
@@ -371,6 +513,7 @@ window.mknLogoFail = function (img) {
     $('pcRibbon').textContent = 'PREVIEW';
     $('formSection').style.display = 'none';
     $('intro').style.display = 'none';
+    $('leadDone').classList.remove('show');
     var done = $('done'); done.classList.add('show');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     done.focus({ preventScroll: true });
@@ -412,7 +555,6 @@ window.mknLogoFail = function (img) {
     }
     if (parts.length) raf = requestAnimationFrame(tick); else { raf = 0; cx.clearRect(0, 0, cv.width, cv.height); }
   }
-  $('popBtn').addEventListener('click', popConfetti);
 
   /* ---------- download card as PNG (drawn on a canvas, no external library) ---------- */
   function loadLogo() {
@@ -490,12 +632,172 @@ window.mknLogoFail = function (img) {
     }).then(function () { b.disabled = false; });
   });
 
+  /* ---------- tabs ---------- */
+  var tabReg = $('tab-reg'), tabLead = $('tab-lead'), pReg = $('panel-reg'), pLead = $('panel-lead');
+  function selectTab(which, focus) {
+    var lead = which === 'lead';
+    tabReg.setAttribute('aria-selected', String(!lead)); tabLead.setAttribute('aria-selected', String(lead));
+    tabReg.tabIndex = lead ? -1 : 0; tabLead.tabIndex = lead ? 0 : -1;
+    pReg.hidden = lead; pLead.hidden = !lead;
+    if (focus) (lead ? tabLead : tabReg).focus();
+  }
+  tabReg.addEventListener('click', function () { selectTab('reg'); });
+  tabLead.addEventListener('click', function () { selectTab('lead'); });
+  [tabReg, tabLead].forEach(function (t) {
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { selectTab(t === tabReg ? 'lead' : 'reg', true); e.preventDefault(); }
+    });
+  });
+
+  /* Remember the partner's CP ID + phone on THIS device only (optional convenience; may be unavailable). */
+  function saveMe(name, phone) { try { localStorage.setItem('mkn_cp', JSON.stringify({ name: name, phone: phone })); } catch (e) {} }
+  function loadMe() { try { return JSON.parse(localStorage.getItem('mkn_cp') || 'null'); } catch (e) { return null; } }
+  function prefillMe() {
+    var me = loadMe(); if (!me) return;
+    if (me.name && !$('l-pname').value) $('l-pname').value = me.name;
+    if (me.phone && !$('l-pphone').value) $('l-pphone').value = me.phone;
+  }
+  prefillMe();
+
+  /* ---------- lead form ---------- */
+  var lf = $('leadForm'), lbtn = $('leadBtn'), lstatus = $('leadStatus'), lBtnHTML = lbtn.innerHTML, lsub = false, receipt = null, rPreview = false;
+  function lstat(kind, html) { lstatus.className = 'status show ' + kind; lstatus.innerHTML = html; }
+  function lclear() { lstatus.className = 'status'; lstatus.innerHTML = ''; }
+  function leadValidate() {
+    var f = lf.elements, ok = true;
+    function chk(errId, el, msg) { setErr(errId, el, msg); if (msg) ok = false; }
+    chk('e-l-pname', f.partnerName, f.partnerName.value.trim().length < 2 ? 'Please enter your name.' : '');
+    chk('e-l-pphone', f.partnerPhone, !f.partnerPhone.value.trim() ? 'Please enter your phone number.' : (validPhone(f.partnerPhone.value) ? '' : 'Please enter a valid phone number.'));
+    chk('e-l-name', f.clientName, f.clientName.value.trim().length < 2 ? 'Please enter the client name.' : '');
+    chk('e-l-phone', f.clientPhone, !f.clientPhone.value.trim() ? 'Please enter the client phone number.' : (validPhone(f.clientPhone.value) ? '' : 'Please enter a valid client phone number.'));
+    chk('e-l-req', f.requirement, f.requirement.value ? '' : 'Please choose a requirement.');
+    chk('e-l-consent', f.consent, f.consent.checked ? '' : 'Please tick the box to continue.');
+    return ok;
+  }
+  lf.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (lsub) return;
+    lclear();
+    if (!leadValidate()) { var bad = lf.querySelector('[aria-invalid="true"]'); if (bad) bad.focus(); return; }
+    var f = lf.elements;
+    if (f.website.value) return;
+    if (!FORM_ENDPOINT) {
+      lstat('info', 'Online lead submission is not switched on yet, so this lead has <strong>not</strong> been saved. Please send it on <a href="' + WA + '" target="_blank" rel="noopener">WhatsApp (+91 8466098440)</a>.');
+      return;
+    }
+    var payload = {
+      formType: 'cplead', partnerName: f.partnerName.value.trim(), partnerPhone: f.partnerPhone.value.trim(),
+      clientName: f.clientName.value.trim(), clientPhone: f.clientPhone.value.trim(), requirement: f.requirement.value,
+      budget: f.budget.value, area: f.area.value.trim(), notes: f.notes.value.trim(), consent: true, website: '',
+      page: location.href.split('#')[0].split('?')[0]
+    };
+    lsub = true; lbtn.disabled = true; lbtn.setAttribute('aria-busy', 'true'); lbtn.textContent = 'Submitting…';
+    var ctrl = ('AbortController' in window) ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 25000) : null;
+    fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload), redirect: 'follow', signal: ctrl ? ctrl.signal : undefined })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (d && d.ok && d.leadId) {
+          saveMe(payload.partnerName, payload.partnerPhone);
+          showReceipt({ leadId: d.leadId, clientName: d.clientName || payload.clientName, requirement: d.requirement || payload.requirement,
+                        by: (d.partnerName || payload.partnerName) + (d.cpId ? ' (' + d.cpId + ')' : ''), submittedOn: d.submittedOn, duplicate: !!d.duplicate,
+                        partnerNew: !!d.partnerNew, cpId: d.cpId || '', partner: { name: d.partnerName || payload.partnerName, phone: d.partnerPhone || payload.partnerPhone, cpId: d.cpId || '', joinedOn: d.cpJoinedOn || '', rera: '' } }, false);
+          f.clientName.value = ''; f.clientPhone.value = ''; f.requirement.value = ''; f.budget.value = ''; f.area.value = ''; f.notes.value = ''; f.consent.checked = false;
+        } else {
+          var fe = (d && d.fieldErrors) || {};
+          if (fe.partnerName) setErr('e-l-pname', f.partnerName, fe.partnerName);
+          if (fe.partnerPhone) setErr('e-l-pphone', f.partnerPhone, fe.partnerPhone);
+          if (fe.consent) setErr('e-l-consent', f.consent, fe.consent);
+          if (fe.clientName) setErr('e-l-name', f.clientName, fe.clientName);
+          if (fe.clientPhone) setErr('e-l-phone', f.clientPhone, fe.clientPhone);
+          if (fe.requirement) setErr('e-l-req', f.requirement, fe.requirement);
+          lstat('bad', esc((d && d.message) || 'Something went wrong.') + ' If this keeps happening, message us on <a href="' + WA + '" target="_blank" rel="noopener">WhatsApp</a>.');
+        }
+      })
+      .catch(function () {
+        lstat('bad', 'We could not confirm that your lead was saved. Please check your connection and try again, or send it on <a href="' + WA + '" target="_blank" rel="noopener">WhatsApp (+91 8466098440)</a>.');
+      })
+      .then(function () {
+        if (timer) clearTimeout(timer);
+        lsub = false; lbtn.disabled = false; lbtn.removeAttribute('aria-busy'); lbtn.innerHTML = lBtnHTML;
+      });
+  });
+
+  function showReceipt(r, preview) {
+    receipt = r; rPreview = !!preview;
+    $('rcId').textContent = r.leadId; $('rcClient').textContent = r.clientName; $('rcReq').textContent = r.requirement;
+    $('rcBy').textContent = r.by; $('rcWhen').textContent = r.submittedOn; $('rcDup').hidden = !r.duplicate;
+    $('lPreviewNote').hidden = !preview;
+    $('leadDoneTitle').textContent = r.duplicate ? 'Already in our records' : 'Lead submitted';
+    $('leadDoneSub').textContent = r.duplicate
+      ? 'This client number is already in our records, so we have noted your submission for our team to review. Here is your receipt.'
+      : 'Thank you! Your lead has been recorded. Here is your receipt, please keep it for your records.';
+    $('rcNew').hidden = !(r.partnerNew && r.cpId); if (r.partnerNew && r.cpId) $('rcNewId').textContent = r.cpId;
+    $('rcCardBtn').hidden = !(r.partnerNew && r.cpId);
+    $('formSection').style.display = 'none'; $('intro').style.display = 'none'; $('done').classList.remove('show');
+    var d = $('leadDone'); d.classList.add('show'); window.scrollTo({ top: 0, behavior: 'smooth' }); d.focus({ preventScroll: true });
+  }
+  $('rcCardBtn').addEventListener('click', function () {
+    if (!receipt || !receipt.partner || !receipt.partner.cpId) return;
+    $('leadDone').classList.remove('show');
+    showCard({ name: receipt.partner.name, phone: receipt.partner.phone, cpId: receipt.partner.cpId, joinedOn: receipt.partner.joinedOn || receipt.submittedOn.split(',')[0], rera: '' }, false, false);
+  });
+  $('anotherLead').addEventListener('click', function () {
+    $('leadDone').classList.remove('show'); $('formSection').style.display = ''; $('intro').style.display = '';
+    selectTab('lead'); lclear(); prefillMe(); window.scrollTo({ top: 0, behavior: 'smooth' }); $('l-name').focus({ preventScroll: true });
+  });
+
+  function drawReceipt(logo) {
+    var W = 1200, H = 760, k = document.createElement('canvas'); k.width = W; k.height = H;
+    var c = k.getContext('2d'), SERIF = '"Cormorant Garamond",Georgia,serif', SANS = 'Inter,system-ui,Arial,sans-serif';
+    c.fillStyle = '#fff'; c.fillRect(0, 0, W, H);
+    var g = c.createLinearGradient(0, 0, W, 0); g.addColorStop(0, '#07152A'); g.addColorStop(1, '#13305A'); c.fillStyle = g; c.fillRect(0, 0, W, 200);
+    c.fillStyle = '#fff'; rr(c, 60, 52, 96, 96, 22); c.fill();
+    if (logo) { c.save(); rr(c, 60, 52, 96, 96, 22); c.clip(); c.drawImage(logo, 64, 56, 88, 88); c.restore(); }
+    else { c.fillStyle = '#0B1F3A'; rr(c, 60, 52, 96, 96, 22); c.fill(); c.fillStyle = '#C9A96E'; c.font = '700 34px ' + SERIF; c.textAlign = 'center'; c.fillText('MKN', 108, 110); c.textAlign = 'left'; }
+    c.fillStyle = '#fff'; c.font = '600 46px ' + SERIF; c.fillText('MKN Real Estate Properties', 180, 104);
+    c.fillStyle = '#C9A96E'; c.font = '600 18px ' + SANS; ls(c, '5px'); c.fillText('LEAD SUBMISSION RECEIPT', 181, 144); ls(c, '0px');
+    var idt = receipt.leadId; c.font = '700 48px ' + SANS; var iw = c.measureText(idt).width, pw = 190 + iw;
+    c.fillStyle = '#C9A96E'; rr(c, 60, 250, pw, 84, 42); c.fill();
+    c.fillStyle = '#07152A'; c.font = '700 19px ' + SANS; ls(c, '4px'); c.fillText('LEAD ID', 92, 300); ls(c, '0px'); c.font = '700 48px ' + SANS; c.fillText(idt, 92 + 118, 304);
+    var items = [['CLIENT', receipt.clientName, 60, 410], ['REQUIREMENT', receipt.requirement, 640, 410], ['SUBMITTED BY', receipt.by, 60, 550], ['SUBMITTED ON', receipt.submittedOn, 640, 550]];
+    items.forEach(function (it) {
+      c.fillStyle = '#8A6A2F'; c.font = '600 16px ' + SANS; ls(c, '4px'); c.fillText(it[0], it[2], it[3]); ls(c, '0px');
+      c.fillStyle = '#0B1F3A'; fit(c, it[1], '600 {s}px ' + SANS, 500, 34, 18); c.fillText(it[1], it[2], it[3] + 46);
+    });
+    c.fillStyle = '#51607A'; c.font = '400 20px ' + SANS;
+    if (receipt.duplicate) c.fillText('This client was already in our records. Your submission has been noted for review.', 60, 678);
+    else if (receipt.partnerNew && receipt.cpId) c.fillText('You are now registered as an MKN channel partner. Your CP ID: ' + receipt.cpId, 60, 678);
+    c.strokeStyle = '#E3DED3'; c.setLineDash([8, 8]); c.beginPath(); c.moveTo(60, 700); c.lineTo(W - 60, 700); c.stroke(); c.setLineDash([]);
+    c.fillStyle = '#51607A'; c.font = '400 20px ' + SANS; c.fillText('mknrealestate.in', 60, 738); c.textAlign = 'right'; c.fillText('WhatsApp +91 8466098440', W - 60, 738); c.textAlign = 'left';
+    if (rPreview) { c.save(); c.translate(W / 2, H / 2); c.rotate(-0.35); c.fillStyle = 'rgba(229,57,53,.25)'; c.font = '700 120px ' + SANS; c.textAlign = 'center'; c.fillText('PREVIEW', 0, 40); c.font = '700 34px ' + SANS; c.fillText('SAMPLE DATA - NOT A REAL SUBMISSION', 0, 100); c.restore(); }
+    return k;
+  }
+  $('rcDl').addEventListener('click', function () {
+    if (!receipt) return;
+    var b = this; b.disabled = true;
+    var fr = (document.fonts && document.fonts.load) ? Promise.all([document.fonts.load('700 40px "Cormorant Garamond"'), document.fonts.load('600 40px Inter')]).catch(function () {}) : Promise.resolve();
+    Promise.all([loadLogo(), fr]).then(function (r) {
+      function save(cvs) { return new Promise(function (res, rej) { try { cvs.toBlob(function (bl) { bl ? res(bl) : rej(new Error('blob')); }, 'image/png'); } catch (e) { rej(e); } }); }
+      return save(drawReceipt(r[0])).catch(function () { return save(drawReceipt(null)); });
+    }).then(function (blob) {
+      var a = document.createElement('a'), url = URL.createObjectURL(blob);
+      a.href = url; a.download = (rPreview ? 'PREVIEW-' : '') + 'MKN-Lead-Receipt-' + receipt.leadId + '.png';
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    }).catch(function () { alert('Sorry, the receipt could not be downloaded. Please take a screenshot instead.'); })
+      .then(function () { b.disabled = false; });
+  });
+
   /* ---------- WhatsApp / email link wiring ---------- */
   Array.prototype.forEach.call(document.querySelectorAll('a[data-wa]'), function (a) {
     a.href = WA + '?text=' + encodeURIComponent('Hello MKN Real Estate Properties, I would like to know about the channel partner programme.');
   });
 
   /* ---------- preview mode: cp-register.html?preview=1 shows the card with clearly-marked sample data ---------- */
+  if (/[?&]tab=lead(&|$)/.test(location.search) || location.hash === '#lead') selectTab('lead');
+  if (/[?&]preview=lead(&|$)/.test(location.search)) {
+    showReceipt({ leadId: 'MKN-LD-0000', clientName: 'Sample Client', requirement: 'Residential project sales', by: 'Sample Partner (MKN-CP-0000)', partnerNew: false, cpId: '', partner: null, submittedOn: new Date().toLocaleString('en-IN', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }), duplicate: false }, true);
+  }
   if (/[?&]preview=1(&|$)/.test(location.search)) {
     var d = new Date(), M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     showCard({ name: 'Sample Partner Name', phone: '+91 98765 43210', cpId: 'MKN-CP-0000', joinedOn: ('0' + d.getDate()).slice(-2) + ' ' + M[d.getMonth()] + ' ' + d.getFullYear(), rera: 'P02400000000' }, true);
